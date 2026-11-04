@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "accountingCompleteness": "partial",
+  "currency": "USD",
+  "basis": {
+    "retrieval": "Provider-reported transaction deductions, not the final provider invoice",
+    "synthesis": "Token-count estimate at declared EU non-global introductory rates; no invoice reconciliation",
+    "sharedInfrastructure": "Not allocated per task: Cloud Run, Firestore, Tasks, Scheduler, Artifact Registry, logs, trace and Vercel",
+    "unknown": "An uncertain operation retains its full reservation; null is not zero"
+  },
+  "tasks": [
+    {
+      "taskId": "44a2e390-02b9-44a7-904f-d9b7234ce132",
+      "kind": "discover",
+      "reference": "08469b513accf4ae449959b8db4d60c1",
+      "measuredRetrievalUSD": 0.001563,
+      "estimatedSynthesisUSD": 0.009275,
+      "estimatedProviderSubtotalUSD": 0.010838,
+      "synthesisInvoiceReconciled": false,
+      "allocatedSharedInfrastructureUSD": null,
+      "completeMeasuredCOGSUSD": null,
+      "unknownOperationCount": 0
+    },
+    {
+      "taskId": "cf0aa730-3b1e-4a42-884a-d77c826eb819",
+      "kind": "compare",
+      "reference": "4906c9dfc041701fbf5f5499d89e5f93",
+      "measuredRetrievalUSD": 0.002189,
+      "estimatedSynthesisUSD": 0.011578,
+      "estimatedProviderSubtotalUSD": 0.013767,
+      "synthesisInvoiceReconciled": false,
+      "allocatedSharedInfrastructureUSD": null,
+      "completeMeasuredCOGSUSD": null,
+      "unknownOperationCount": 0
+    }
+  ]
+}

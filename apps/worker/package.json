@@ -1,0 +1,11 @@
+{
+  "name": "@valyu-research/worker",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@valyu-research/adapters": "workspace:*",
+    "@valyu-research/contracts": "workspace:*",
+    "@valyu-research/research": "workspace:*",
+    "effect": "4.1.2"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "api": [
+    {
+      "observedAt": "2026-11-02T18:09:05.944Z",
+      "login": "created evaluator session",
+      "kind": "discover",
+      "taskId": "44a2e390-02b9-44a7-904f-d9b7234ce132",
+      "reference": "08469b513accf4ae449959b8db4d60c1",
+      "url": "https://fieldnotes-valyu.vercel.app/tasks/44a2e390-02b9-44a7-904f-d9b7234ce132",
+      "status": "succeeded",
+      "acceptanceMs": 723,
+      "timings": {
+        "firstSourcesMs": 2895,
+        "firstBlockMs": 7534,
+        "workerMs": 9570,
+        "totalMs": 11377
+      },
+      "citationCount": 6,
+      "citationIdentity": "all links belong to retained sources; entailment requires review",
+      "validationFailure": {
+        "httpStatus": 400,
+        "code": "INVALID_INPUT"
+      },
+      "idempotentReplaySameTask": true,
+      "usage": [
+        {
+          "operationId": "44a2e390-02b9-44a7-904f-d9b7234ce132:search:q1:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 938,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_02fb7a73-eb9b-41a2-a165-8f639b8bb1a9"
+        },
+        {
+          "operationId": "44a2e390-02b9-44a7-904f-d9b7234ce132:search:q2:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 625,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_07d1af77-9231-4b12-b01a-388039b1bda3"
+        },
+        {
+          "operationId": "44a2e390-02b9-44a7-904f-d9b7234ce132:model:1",
+          "service": "model",
+          "state": "settled",
+          "reservedMicros": 60000,
+          "costMicros": 9275,
+          "basis": "estimate",
+          "detail": "Vertex gemini-3.8-flash usage: 7452 input, 758 output, 0 thought tokens"
+        }
+      ]
+    },
+    {
+      "observedAt": "2026-11-02T18:09:58.200Z",
+      "login": "reused same evaluator session",
+      "kind": "compare",
+      "taskId": "cf0aa730-3b1e-4a42-884a-d77c826eb819",
+      "reference": "4906c9dfc041701fbf5f5499d89e5f93",
+      "url": "https://fieldnotes-valyu.vercel.app/tasks/cf0aa730-3b1e-4a42-884a-d77c826eb819",
+      "status": "succeeded",
+      "acceptanceMs": 389,
+      "timings": {
+        "firstSourcesMs": 967,
+        "firstBlockMs": 4761,
+        "workerMs": 10313,
+        "totalMs": 10560
+      },
+      "citationCount": 6,
+      "citationIdentity": "all links belong to retained sources; entailment requires review",
+      "validationFailure": {
+        "httpStatus": 400,
+        "code": "INVALID_INPUT"
+      },
+      "idempotentReplaySameTask": true,
+      "usage": [
+        {
+          "operationId": "cf0aa730-3b1e-4a42-884a-d77c826eb819:search:q1:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 938,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_34079346-fa21-47a8-88a6-9ad33e145ca1"
+        },
+        {
+          "operationId": "cf0aa730-3b1e-4a42-884a-d77c826eb819:search:q2:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 313,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_4fd4f8ec-e1b6-4b20-a4de-33fb8bc49f6f"
+        },
+        {
+          "operationId": "cf0aa730-3b1e-4a42-884a-d77c826eb819:search:q3:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 938,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_9630bc96-b99c-44f0-85b2-8d974389181f"
+        },
+        {
+          "operationId": "cf0aa730-3b1e-4a42-884a-d77c826eb819:model:1",
+          "service": "model",
+          "state": "settled",
+          "reservedMicros": 60000,
+          "costMicros": 11578,
+          "basis": "estimate",
+          "detail": "Vertex gemini-3.8-flash usage: 9738 input, 859 output, 0 thought tokens"
+        }
+      ]
+    }
+  ],
+  "browser": {
+    "observedAt": "2026-11-02T18:10:22.876Z",
+    "hosted": [
+      {
+        "kind": "discover",
+        "taskId": "44a2e390-02b9-44a7-904f-d9b7234ce132",
+        "citationDrawer": true,
+        "originalLinkMatches": true,
+        "sourceInspectionAdditionalReads": 0,
+        "refresh": true
+      },
+      {
+        "kind": "compare",
+        "taskId": "cf0aa730-3b1e-4a42-884a-d77c826eb819",
+        "citationDrawer": true,
+        "originalLinkMatches": true,
+        "sourceInspectionAdditionalReads": 0,
+        "refresh": true
+      }
+    ],
+    "localFailure": {
+      "simulation": true,
+      "taskId": "1d0c5672-e045-4694-9788-cf53886a8406",
+      "reference": "286c8431e9aec2bd7fc27e1bcaea4928",
+      "status": "failed",
+      "code": "INVALID_REPORT",
+      "visibleAfterRefresh": true
+    },
+    "newHostedResearchCalls": 0
+  }
+}

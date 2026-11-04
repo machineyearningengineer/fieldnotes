@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "observedAt": "2026-11-02T20:33:25.617390+00:00",
+  "model": "gemini-3.8-flash",
+  "supportReplay": {
+    "taskId": "61093295-c12c-453e-8eae-31f55869067b",
+    "status": "succeeded",
+    "verdicts": [
+      "partial",
+      "supported"
+    ],
+    "expected": "Mixed unsupported LFP claim is not supported; positive control is supported",
+    "estimatedUSD": 0.000626,
+    "newSearchOrGenerationCalls": 0,
+    "temporaryCloudRunJobDeleted": true
+  },
+  "sameQuestionSamples": [
+    {
+      "sourceCommit": "dfee072",
+      "taskId": "37d372b5-14f4-4d4b-b97b-984d8c909a2b",
+      "reference": "bc339394e2213970c48d9beccfcb08b0",
+      "status": "succeeded",
+      "input": {
+        "schemaVersion": 1,
+        "kind": "discover",
+        "question": "How does Pinterest combine an image or selected object with a text refinement? Explain the retrieval and reranking mechanism, why its parts exist, and the limits of the published evidence."
+      },
+      "timings": {
+        "searchArtifactSaveMs": 80,
+        "search_q1_ms": 6029,
+        "firstSourcesMs": 8539,
+        "search_q2_ms": 7388,
+        "modelHeadersMs": 1079,
+        "modelFirstChunkMs": 1082,
+        "modelArtifactSaveMs": 388,
+        "firstBlockMs": 21847,
+        "supportCheckMs": 5215,
+        "withheldClaims": 4,
+        "checkedClaims": 8,
+        "firstVerifiedSectionMs": 5453,
+        "modelBlockSaveMs": 188,
+        "modelStreamMs": 7110,
+        "modelElapsedMs": 9235,
+        "modelChunkCount": 41,
+        "modelUsageSaveMs": 28,
+        "workerMs": 23694,
+        "totalMs": 25880
+      },
+      "stageDurationsMs": {
+        "queued": 2232,
+        "searching": 14062,
+        "writing": 9502,
+        "checking": 84
+      },
+      "retainedSources": 4,
+      "publishedClaims": 5,
+      "citedDistinctSources": 1,
+      "measuredSearchUSD": 0.002501,
+      "estimatedGenerationUSD": 0.010604,
+      "estimatedSupportUSD": 0.003854,
+      "coverage": {
+        "outcome": "partial",
+        "covered": [
+          "f1",
+          "f2",
+          "f3"
+        ],
+        "missing": [
+          {
+            "id": "f4",
+            "ask": "limits of published evidence",
+            "required": true
+          }
+        ],
+        "basis": "Model-judged claim relevance; deterministic aggregation, not independent scientific certification"
+      },
+      "primarySourceContext": {
+        "url": "https://www.pinterestcareers.com/media/554n4aaq/introducing-multi-modal-search-at-pinterest-a-new-user-experience.pdf",
+        "excerptCharacters": 6000,
+        "containsSearchSage": false,
+        "containsSigLIP2": false,
+        "containsMagicLens": false,
+        "selection": null
+      }
+    },
+    {
+      "sourceCommit": "98f37c7",
+      "taskId": "623bcfe1-ee55-46e8-bb8b-b442559455ca",
+      "reference": "79a53e20f8365acb8f0a91b51e741aa6",
+      "status": "succeeded",
+      "input": {
+        "schemaVersion": 1,
+        "kind": "discover",
+        "question": "How does Pinterest combine an image or selected object with a text refinement? Explain the retrieval and reranking mechanism, why its parts exist, and the limits of the published evidence."
+      },
+      "timings": {
+        "searchArtifactSaveMs": 85,
+        "search_q2_ms": 983,
+        "firstSourcesMs": 3306,
+        "search_q1_ms": 486,
+        "modelHeadersMs": 1081,
+        "modelFirstChunkMs": 1084,
+        "modelArtifactSaveMs": 464,
+        "firstBlockMs": 8552,
+        "supportCheckMs": 8082,
+        "withheldClaims": 2,
+        "checkedClaims": 11,
+        "firstVerifiedSectionMs": 4862,
+        "modelBlockSaveMs": 204,
+        "modelStreamMs": 7963,
+        "modelElapsedMs": 11746,
+        "modelChunkCount": 48,
+        "modelUsageSaveMs": 26,
+        "workerMs": 13681,
+        "totalMs": 15684
+      },
+      "stageDurationsMs": {
+        "queued": 2029,
+        "searching": 1597,
+        "writing": 11981,
+        "checking": 77
+      },
+      "retainedSources": 4,
+      "publishedClaims": 9,
+      "citedDistinctSources": 1,
+      "measuredSearchUSD": 0.002501,
+      "estimatedGenerationUSD": 0.010478,
+      "estimatedSupportUSD": 0.004755,
+      "coverage": {
+        "outcome": "partial",
+        "covered": [
+          "f1",
+          "f2",
+          "f3"
+        ],
+        "missing": [
+          {
+            "id": "f4",
+            "ask": "limits of the published evidence",
+            "required": true
+          }
+        ],
+        "basis": "Model-judged claim relevance; deterministic aggregation, not independent scientific certification"
+      },
+      "primarySourceContext": {
+        "url": "https://www.pinterestcareers.com/media/554n4aaq/introducing-multi-modal-search-at-pinterest-a-new-user-experience.pdf",
+        "excerptCharacters": 5035,
+        "containsSearchSage": true,
+        "containsSigLIP2": true,
+        "containsMagicLens": true,
+        "selection": {
+          "version": 1,
+          "sourceLength": 13862,
+          "ranges": [
+            {
+              "start": 1836,
+              "end": 2907
+            },
+            {
+              "start": 4878,
+              "end": 5900
+            },
+            {
+              "start": 5901,
+              "end": 6863
+            },
+            {
+              "start": 6864,
+              "end": 7961
+            },
+            {
+              "start": 7963,
+              "end": 8810
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "browser": {
+    "taskId": "623bcfe1-ee55-46e8-bb8b-b442559455ca",
+    "newResearchCalls": 0,
+    "proof": [
+      {
+        "viewport": "desktop",
+        "citationOpens": true,
+        "originalLinkMatches": true,
+        "additionalSourceReads": 0,
+        "refreshRetainsAnswer": true
+      },
+      {
+        "viewport": "mobile",
+        "citationOpens": true,
+        "originalLinkMatches": true,
+        "additionalSourceReads": 0,
+        "refreshRetainsAnswer": true
+      }
+    ]
+  },
+  "interpretation": [
+    "The original known mixed-claim regression is blocked by the real model checker; this is not a broad calibrated entailment evaluation.",
+    "The later source windows retain the actual published mechanism. Both reports still mark missing evidence-limit coverage.",
+    "Observed first checked section improved 21.847s to 8.552s and total 25.880s to 15.684s. Provider/cache responses also changed; no causal speedup attribution or p50/p90 is claimed.",
+    "Parallel search removes avoidable serial waiting; original excerpt offsets and independent receipts remain auditable.",
+    "The same-model judge and generated facet plan can still make correlated support or coverage errors."
+  ],
+  "limits": {
+    "loadTestsRun": false,
+    "independentScientificCertification": false,
+    "completeMeasuredCOGS": null,
+    "providerCeilingUSD": 1.5,
+    "newSpendAuthorityGBP": 5
+  },
+  "compareObservation": {
+    "sourceCommit": "98f37c7",
+    "taskId": "9d04ede1-01f5-4745-b8a2-c9505feb359a",
+    "reference": "abb4c88cf611df7043cc32dbf7483d5e",
+    "input": {
+      "schemaVersion": 1,
+      "kind": "compare",
+      "question": "How do cycle life and low-temperature performance compare for stationary grid storage?",
+      "alternatives": [
+        "sodium-ion",
+        "lithium iron phosphate"
+      ]
+    },
+    "status": "succeeded",
+    "timings": {
+      "searchArtifactSaveMs": 101,
+      "search_q3_ms": 2454,
+      "firstSourcesMs": 4061,
+      "search_q1_ms": 7686,
+      "search_q2_ms": 7517,
+      "modelHeadersMs": 11848,
+      "modelFirstChunkMs": 11849,
+      "modelArtifactSaveMs": 328,
+      "modelStreamMs": 19480,
+      "supportCheckMs": 16200,
+      "withheldClaims": 5,
+      "checkedClaims": 10,
+      "firstBlockMs": 33898,
+      "firstVerifiedSectionMs": 24643,
+      "modelBlockSaveMs": 119,
+      "modelElapsedMs": 30454,
+      "modelChunkCount": 47,
+      "modelUsageSaveMs": 24,
+      "workerMs": 39439,
+      "totalMs": 39970
+    },
+    "stageDurationsMs": {
+      "queued": 564,
+      "searching": 8614,
+      "writing": 30704,
+      "checking": 88
+    },
+    "qualityAccepted": false,
+    "qualityIssue": "A supplier comparison was promoted to proven universal cycle-life performance without independent conditions/measurement. Attribution and comparative retrieval priority need tightening.",
+    "basis": "This slower different-question result is not part of the same-question Pinterest before/after comparison."
+  }
+}

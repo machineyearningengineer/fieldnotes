@@ -1,0 +1,9 @@
+**/node_modules
+**/.next
+.git
+.local
+.scratch
+.artifacts
+.env*
+sources
+reviews

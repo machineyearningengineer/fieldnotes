@@ -1,0 +1,33 @@
+services:
+  firestore:
+    init: true
+    stop_signal: SIGINT
+    image: gcr.io/google.com/cloudsdktool/google-cloud-cli@sha256:112c21f8f6e04b03b393b3c34fb943a1f443e839f18c6492c364ac2e6c3ff935
+    ports:
+      - "127.0.0.1:${FIRESTORE_PORT}:8080"
+    volumes:
+      - ./.local/firestore:/data
+    environment:
+      FIRESTORE_IMPORT: ${FIRESTORE_IMPORT:-}
+    command:
+      - bash
+      - -c
+      - |
+        if [ -n "$${FIRESTORE_IMPORT}" ]; then
+          exec gcloud emulators firestore start --project=valyu-research-local --host-port=0.0.0.0:8080 "--import-data=/data/$${FIRESTORE_IMPORT}"
+        else
+          exec gcloud emulators firestore start --project=valyu-research-local --host-port=0.0.0.0:8080
+        fi
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python3",
+          "-c",
+          "import socket; socket.create_connection(('127.0.0.1',8080),2).close()",
+        ]
+      interval: 2s
+      timeout: 3s
+      retries: 35
+      start_period: 3s
+    stop_grace_period: 20s

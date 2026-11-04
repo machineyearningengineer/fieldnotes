@@ -1,0 +1,244 @@
+{
+  "status": "succeeded",
+  "reportDraft": {
+    "blocks": [
+      {
+        "id": "c7489f1d-38c0-477f-a491-c5789b270b7f:block:1",
+        "markdown": "## Evidence for Sodium-Ion Batteries\n\nSodium-ion battery technology is currently under development by academic and start-up entities, with performance in energy density approaching that of commercial lithium-ion batteries\\. [1](https://arxiv.org/abs/2005.04963)\n\nResearch into positive electrode materials for sodium-ion batteries has demonstrated potential advantages over those used in lithium-ion batteries, though long-term lifespan requires further improvement\\. [1](https://arxiv.org/abs/2005.04963)"
+      },
+      {
+        "id": "c7489f1d-38c0-477f-a491-c5789b270b7f:block:2",
+        "markdown": "## Conditions and Limitations\n\nThe assessment of sodium-ion battery performance is complicated by the need for accurate specification of end-of-life energy density and the requirement for detailed studies on interface stability, aging mechanisms, and long-term operation\\. [1](https://arxiv.org/abs/2005.04963)\n\nSodium-ion batteries are distinct from sodium-sulphur batteries, which are a separate technology often utilized in high-temperature configurations for stationary storage\\. [2](https://arxiv.org/abs/2505.04391)"
+      },
+      {
+        "id": "c7489f1d-38c0-477f-a491-c5789b270b7f:block:3",
+        "markdown": "## Comparison with Alternatives\n\nNo direct performance comparison is established between sodium-ion batteries and sodium-sulphur or vanadium redox flow batteries for grid-scale applications in the provided sources\\. [1](https://arxiv.org/abs/2005.04963)\n\nWhile sodium-sulphur and vanadium redox batteries are noted for their depth of discharge \\(DoD\\) in grid-resilience modeling, these findings do not apply to sodium-ion batteries\\. [4](https://arxiv.org/abs/1901.11389)"
+      },
+      {
+        "id": "c7489f1d-38c0-477f-a491-c5789b270b7f:block:4",
+        "markdown": "## Further Reading\n\nFurther information on the development of beyond-lithium technologies, including multi-valent cation systems and solid-state configurations, can be found in reviews of post-lithium-ion electrochemical storage systems\\. [1](https://arxiv.org/abs/2005.04963)\n\nComprehensive reviews on solid-state sodium-based batteries provide additional context on conversion-based cells and electrolyte advancements\\. [2](https://arxiv.org/abs/2505.04391)"
+      }
+    ]
+  },
+  "error": null,
+  "sources": [
+    {
+      "id": "s-a505adb6592109805ba4a87d",
+      "title": "Exploits, advances and challenges benefiting beyond Li-ion battery technologies",
+      "url": "https://arxiv.org/abs/2005.04963",
+      "authors": [
+        "Abdel El Kharbachi",
+        "Olena Zavorotynska",
+        "M. Latroche",
+        "Ferm\u00edn Cuevas",
+        "V.A. Yartys",
+        "Maximilian Fichtner"
+      ],
+      "publishedAt": "2019-12-03",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "The present market of mobile devices and electric transportation technologies is undergoing expansion in terms of the need for high energy density and safe rechargeable batteries. The most promising post-Li ion electrochemical storage systems are addressed in this Review. Table 2",
+      "metadata": {
+        "doi": "https://doi.org/10.1016/j.jallcom.2019.153261",
+        "citation": "Abdel El Kharbachi et al. (2019). Exploits, advances and challenges benefiting beyond Li-ion battery technologies.https://doi.org/10.1016/j.jallcom.2019.153261",
+        "price": 0.0003125,
+        "relevanceScore": 0.6729100202070835
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-9682b3c268446618c5781dde",
+      "title": "Advancements in Solid-State Sodium-Based Batteries: A Comprehensive Review",
+      "url": "https://arxiv.org/abs/2505.04391",
+      "authors": [
+        "Arianna Massaro",
+        "Lorenzo Squillantini",
+        "Francesca De Giorgio",
+        "Francesca A. Scaramuzzo",
+        "Mauro Pasquali",
+        "Sergio Brutti"
+      ],
+      "publishedAt": "2025-05-07",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "<Back> - 6. Conclusions and forward",
+      "metadata": {
+        "doi": "",
+        "citation": "Arianna Massaro et al. (2025). Advancements in Solid-State Sodium-Based Batteries: A Comprehensive Review.https://arxiv.org/abs/2505.04391",
+        "price": 0.0003125,
+        "relevanceScore": 0.6224513364842377
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-2c775ae7c8ae493f3c5085b6",
+      "title": "Barriers to grid-connected battery systems: Evidence from the Spanish electricity market",
+      "url": "https://arxiv.org/abs/2007.00486",
+      "authors": [
+        "Yu Hu",
+        "David Soler Soneira",
+        "Mar\u00eda Manzano"
+      ],
+      "publishedAt": "2020-06-28",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Electrical energy storage is considered essential for the future energy systems. Among all the energy storage technologies, battery systems may provide flexibility to the power grid in a more distributed and decentralized way. In countries with deregulated electricity markets, gr",
+      "metadata": {
+        "doi": "",
+        "citation": "Yu Hu et al. (2020). Barriers to grid-connected battery systems: Evidence from the Spanish electricity market.https://arxiv.org/abs/2007.00486",
+        "price": 0.0003125,
+        "relevanceScore": 0.5811782325115258
+      },
+      "queryIds": [
+        "q2"
+      ]
+    },
+    {
+      "id": "s-2d70ebca5a106083a8a14fae",
+      "title": "Battery selection for optimal grid-outage resilient photovoltaic and battery systems",
+      "url": "https://arxiv.org/abs/1901.11389",
+      "authors": [
+        "Stamatis Tsianikas",
+        "Jian Zhou",
+        "Nooshin Yousefi",
+        "David W. Coit"
+      ],
+      "publishedAt": "2019-01-01",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "The first and most important purpose of the current research work is to investigate the effects that different battery types have on the optimal configuration of photovoltaic (PV) and battery systems, from both economic and resilience perspectives. Many industry reports, as well ",
+      "metadata": {
+        "doi": "https://doi.org/10.48550/arxiv.1901.11389",
+        "citation": "Stamatis Tsianikas et al. (2019). Battery selection for optimal grid-outage resilient photovoltaic and battery systems.https://doi.org/10.48550/arxiv.1901.11389",
+        "price": 0.0003125,
+        "relevanceScore": 0.5349794534116485
+      },
+      "queryIds": [
+        "q2"
+      ]
+    }
+  ],
+  "stage": "complete",
+  "report": "## Evidence for Sodium-Ion Batteries\n\nSodium-ion battery technology is currently under development by academic and start-up entities, with performance in energy density approaching that of commercial lithium-ion batteries\\. [1](https://arxiv.org/abs/2005.04963)\n\nResearch into positive electrode materials for sodium-ion batteries has demonstrated potential advantages over those used in lithium-ion batteries, though long-term lifespan requires further improvement\\. [1](https://arxiv.org/abs/2005.04963)\n\n## Conditions and Limitations\n\nThe assessment of sodium-ion battery performance is complicated by the need for accurate specification of end-of-life energy density and the requirement for detailed studies on interface stability, aging mechanisms, and long-term operation\\. [1](https://arxiv.org/abs/2005.04963)\n\nSodium-ion batteries are distinct from sodium-sulphur batteries, which are a separate technology often utilized in high-temperature configurations for stationary storage\\. [2](https://arxiv.org/abs/2505.04391)\n\n## Comparison with Alternatives\n\nNo direct performance comparison is established between sodium-ion batteries and sodium-sulphur or vanadium redox flow batteries for grid-scale applications in the provided sources\\. [1](https://arxiv.org/abs/2005.04963)\n\nWhile sodium-sulphur and vanadium redox batteries are noted for their depth of discharge \\(DoD\\) in grid-resilience modeling, these findings do not apply to sodium-ion batteries\\. [4](https://arxiv.org/abs/1901.11389)\n\n## Further Reading\n\nFurther information on the development of beyond-lithium technologies, including multi-valent cation systems and solid-state configurations, can be found in reviews of post-lithium-ion electrochemical storage systems\\. [1](https://arxiv.org/abs/2005.04963)\n\nComprehensive reviews on solid-state sodium-based batteries provide additional context on conversion-based cells and electrolyte advancements\\. [2](https://arxiv.org/abs/2505.04391)",
+  "createdAt": "2026-11-02T16:38:39.837Z",
+  "expiresAt": "2026-11-02T16:43:39.837Z",
+  "timings": {
+    "firstSourcesMs": 2756,
+    "workerMs": 5034,
+    "firstBlockMs": 4686,
+    "totalMs": 6734
+  },
+  "id": "c7489f1d-38c0-477f-a491-c5789b270b7f",
+  "input": {
+    "kind": "discover",
+    "schemaVersion": 1,
+    "question": "What evidence supports sodium-ion batteries for stationary grid storage?"
+  },
+  "schemaVersion": 1,
+  "revision": 16,
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-11-02T16:38:39.837Z",
+      "stage": "queued",
+      "message": "Research queued"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-11-02T16:38:41.577Z",
+      "stage": "searching",
+      "message": "Finding relevant evidence"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-11-02T16:38:42.593Z",
+      "stage": "searching",
+      "message": "3 sources found for this search"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-11-02T16:38:43.257Z",
+      "stage": "searching",
+      "message": "2 sources found for this search"
+    },
+    {
+      "sequence": 9,
+      "at": "2026-11-02T16:38:43.390Z",
+      "stage": "writing",
+      "message": "Putting the evidence together"
+    },
+    {
+      "sequence": 15,
+      "at": "2026-11-02T16:38:46.470Z",
+      "stage": "checking",
+      "message": "Checking source links and report structure"
+    },
+    {
+      "sequence": 16,
+      "at": "2026-11-02T16:38:46.571Z",
+      "stage": "complete",
+      "message": "Evidence brief ready"
+    }
+  ],
+  "traceId": "b0f29640a1e507125e8c5d8e9dd0ea74",
+  "usage": [
+    {
+      "operationId": "c7489f1d-38c0-477f-a491-c5789b270b7f:search:q1:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 20000,
+      "costMicros": 938,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_20289648-d439-4018-b71c-f36950b2ef03"
+    },
+    {
+      "operationId": "c7489f1d-38c0-477f-a491-c5789b270b7f:search:q2:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 20000,
+      "costMicros": 625,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_5aca1976-d278-49f6-a902-f70c181b2f5b"
+    },
+    {
+      "operationId": "c7489f1d-38c0-477f-a491-c5789b270b7f:model:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 30000,
+      "costMicros": 3365,
+      "basis": "estimate",
+      "detail": "Vertex usage: 7464 input, 795 output, 0 thought tokens"
+    }
+  ],
+  "queries": [
+    {
+      "id": "q1",
+      "query": "What evidence supports sodium-ion batteries for stationary grid storage? academic studies review",
+      "purpose": "Find the main research evidence",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-a505adb6592109805ba4a87d",
+        "s-a505adb6592109805ba4a87d",
+        "s-9682b3c268446618c5781dde"
+      ]
+    },
+    {
+      "id": "q2",
+      "query": "What evidence supports sodium-ion batteries for stationary grid storage? limitations conflicting evidence",
+      "purpose": "Look for uncertainty and disagreement",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-2c775ae7c8ae493f3c5085b6",
+        "s-2d70ebca5a106083a8a14fae"
+      ]
+    }
+  ],
+  "updatedAt": "2026-11-02T16:38:46.571Z",
+  "simulation": false
+}

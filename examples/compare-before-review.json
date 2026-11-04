@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "id": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9",
+  "input": {
+    "schemaVersion": 1,
+    "kind": "compare",
+    "question": "How do cycle life and low-temperature performance compare for stationary grid storage?",
+    "alternatives": [
+      "sodium-ion",
+      "lithium iron phosphate"
+    ]
+  },
+  "status": "succeeded",
+  "stage": "complete",
+  "revision": 19,
+  "createdAt": "2026-11-02T16:24:54.144Z",
+  "updatedAt": "2026-11-02T16:25:00.574Z",
+  "expiresAt": "2026-11-02T16:29:54.144Z",
+  "simulation": false,
+  "queries": [
+    {
+      "id": "q1",
+      "query": "sodium-ion How do cycle life and low-temperature performance compare for stationary grid storage? research evidence",
+      "purpose": "Evidence for sodium-ion",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-578555aa3956e8813f4ca365",
+        "s-1a632f892661f1b40599c3b0",
+        "s-adfe5ecd10863cecc246c32c"
+      ]
+    },
+    {
+      "id": "q2",
+      "query": "lithium iron phosphate How do cycle life and low-temperature performance compare for stationary grid storage? research evidence",
+      "purpose": "Evidence for lithium iron phosphate",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-1a930f37d2fcaf0773e4e975"
+      ]
+    },
+    {
+      "id": "q3",
+      "query": "sodium-ion versus lithium iron phosphate How do cycle life and low-temperature performance compare for stationary grid storage? limitations comparative studies",
+      "purpose": "Comparable conditions and limitations",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-a505adb6592109805ba4a87d",
+        "s-a7a14b3abacf4fdd022c2503",
+        "s-a7a14b3abacf4fdd022c2503"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s-578555aa3956e8813f4ca365",
+      "title": "Improved Electrochemical Performance and Diffusion kinetics by Boron-doping in Na$_{0.66}$Mn$_{0.8}$Fe$_{0.2}$O$_{2}$ Layered Cathodes for Sodium-Ion Batteries",
+      "url": "https://arxiv.org/abs/2604.24683",
+      "authors": [
+        "Jayashree Pati",
+        "P. Senthilkumar",
+        "Deepak Seth",
+        "Riya Gulati",
+        "Manish Kr. Singh",
+        "Madhav Sharma",
+        "Anita Dhaka",
+        "M. Ali Haider",
+        "Rajendra S. Dhaka"
+      ],
+      "publishedAt": "2026-04-27",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "We report the electrochemical investigation and study the diffusion kinetics of boron doped Na$_{0.66}$Mn$_{0.8}$Fe$_{0.2}$O$_{2}$ (B-NMFO) cathode materials for sodium-ion batteries. Notably, the B-NMFO cathode exhibits improved specific capacity of 163 mAh g$^{-1}$ as compared ",
+      "metadata": {
+        "relevanceScore": 0.6990723910035169,
+        "citation": "Jayashree Pati et al. (2026). Improved Electrochemical Performance and Diffusion kinetics by Boron-doping in Na$_{0.66}$Mn$_{0.8}$Fe$_{0.2}$O$_{2}$ Layered Cathodes for Sodium-Ion Batteries.https://doi.org/10.48550/arxiv.2604.24683",
+        "price": 0.0003125,
+        "doi": "https://doi.org/10.48550/arxiv.2604.24683"
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-1a632f892661f1b40599c3b0",
+      "title": "Lithium-ion battery degradation: Introducing the concept of reservoirs to design for lifetime",
+      "url": "https://arxiv.org/abs/2512.15440",
+      "authors": [
+        "Mohammed Asheruddin Nazeeruddin",
+        "Ruihe Li",
+        "Simon E. J. OKane",
+        "Monica Marinescu",
+        "Gregory J. Offer"
+      ],
+      "publishedAt": "2025-12-17",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Lithium-ion batteries (LIBs) are the backbone of electrified transport and grid-scale energy storage. Commercial designs often target energy densities of 250\u2013300 Wh/kg, yet these gains are increasingly undermined by limitations in service life\u2014with capacity fade often exceeding 2",
+      "metadata": {
+        "relevanceScore": 0.5923593869102672,
+        "doi": "https://doi.org/10.48550/arxiv.2512.15440",
+        "citation": "Mohammed Asheruddin Nazeeruddin et al. (2025). Lithium-ion battery degradation: Introducing the concept of reservoirs to design for lifetime.https://doi.org/10.48550/arxiv.2512.15440",
+        "price": 0.0003125
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-adfe5ecd10863cecc246c32c",
+      "title": "Quantifying the Rate Performance of Potassium-Ion Batteries",
+      "url": "https://arxiv.org/abs/2512.14191",
+      "authors": [
+        "Caolin Ua Tuiscint",
+        "Jonathan N Coleman"
+      ],
+      "publishedAt": "2025-12-16",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "In battery research and industry, lithium-ion batteries are dominant due to their legacy of research and high energy density. However, due to the high demand for batteries and limited resources of lithium, lithium prices are high and increase the cost of batteries. As a result, p",
+      "metadata": {
+        "relevanceScore": 0.5080722861098859,
+        "price": 0.0003125,
+        "doi": "https://doi.org/10.48550/arxiv.2512.14191",
+        "citation": "Caolin Ua Tuiscint & Jonathan N Coleman (2025). Quantifying the Rate Performance of Potassium-Ion Batteries.https://doi.org/10.48550/arxiv.2512.14191"
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-1a930f37d2fcaf0773e4e975",
+      "title": "Model Predictive Coolant Allocation for Integrated Tab-Surface Cooling of Battery Cells",
+      "url": "https://arxiv.org/abs/2607.10872",
+      "authors": [
+        "Godwin K. Peprah",
+        "Torsten Wik",
+        "Masood Tamadondar",
+        "Changfu Zou"
+      ],
+      "publishedAt": "2026-07-12",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Battery electrical tab cooling is effective at reducing internal thermal gradients by exploiting the high thermal conductivity of the current collectors, whereas surface cooling is effective at reducing temperature rise because of its large heat transfer area. Using either strate",
+      "metadata": {
+        "relevanceScore": 0.6478669700619439,
+        "doi": "https://doi.org/10.48550/arxiv.2607.10872",
+        "citation": "Godwin K. Peprah et al. (2026). Model Predictive Coolant Allocation for Integrated Tab-Surface Cooling of Battery Cells.https://doi.org/10.48550/arxiv.2607.10872",
+        "price": 0.0003125
+      },
+      "queryIds": [
+        "q2"
+      ]
+    },
+    {
+      "id": "s-a505adb6592109805ba4a87d",
+      "title": "Exploits, advances and challenges benefiting beyond Li-ion battery technologies",
+      "url": "https://arxiv.org/abs/2005.04963",
+      "authors": [
+        "Abdel El Kharbachi",
+        "Olena Zavorotynska",
+        "M. Latroche",
+        "Ferm\u00edn Cuevas",
+        "V.A. Yartys",
+        "Maximilian Fichtner"
+      ],
+      "publishedAt": "2019-12-03",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "(a) Helmholtz Institute Ulm for Electrochemical Energy Storage (HIU), Helmholtzstr. 11, 89081 Ulm, Germany (b) Department of Mathematics and Physics, University of Stavanger, P.O. Box 8600 Forus, NO-4036 Stavanger, Norway (c) Universit\u00e9 Paris Est, Institut de Chimie et des Mat\u00e9ri",
+      "metadata": {
+        "doi": "https://doi.org/10.1016/j.jallcom.2019.153261",
+        "price": 0.0003125,
+        "citation": "Abdel El Kharbachi et al. (2019). Exploits, advances and challenges benefiting beyond Li-ion battery technologies.https://doi.org/10.1016/j.jallcom.2019.153261",
+        "relevanceScore": 0.7020990432498635
+      },
+      "queryIds": [
+        "q3"
+      ]
+    },
+    {
+      "id": "s-a7a14b3abacf4fdd022c2503",
+      "title": "Synergistic Role of Transition Metals and Polyanionic Frameworks in Phosphate-Based Cathode Materials for Sodium-Ion Batteries",
+      "url": "https://arxiv.org/abs/2504.19299",
+      "authors": [
+        "Madhav Sharma",
+        "Riya Gulati",
+        "Rajendra S. Dhaka"
+      ],
+      "publishedAt": "2025-04-27",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Ongoing research in the area of advanced cathode materials for sodium-ion batteries (SIBs) is expected to reduce reliance on lithium-ion batteries (LIBs), providing more affordable and sustainable energy storage solutions. Polyanionic compounds have emerged as promising options d",
+      "metadata": {
+        "relevanceScore": 0.6697761230036876,
+        "price": 0.0003125,
+        "doi": "",
+        "citation": "Madhav Sharma et al. (2025). Synergistic Role of Transition Metals and Polyanionic Frameworks in Phosphate-Based Cathode Materials for Sodium-Ion Batteries.https://arxiv.org/abs/2504.19299"
+      },
+      "queryIds": [
+        "q3"
+      ]
+    }
+  ],
+  "reportDraft": {
+    "blocks": [
+      {
+        "id": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9:block:1",
+        "markdown": "## Cycle Life Comparison\n\nLithium-ion batteries are widely recognized for their long cycling stability, which has historically made them a standard for energy storage applications\\. [1](https://arxiv.org/abs/2604.24683)\n\nSodium-ion batteries generally exhibit inferior cycle life compared to lithium-ion counterparts, though specific cathode materials like polyanionic compounds are being developed to improve long-term stability\\. [1](https://arxiv.org/abs/2604.24683)\n\nCertain phosphate-based polyanionic cathodes for sodium-ion batteries have demonstrated robust structural stability, with some materials achieving thousands of cycles in experimental settings\\. [6](https://arxiv.org/abs/2504.19299)"
+      },
+      {
+        "id": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9:block:2",
+        "markdown": "## Low-Temperature Performance\n\nLithium-ion battery performance, including lifespan and charge acceptance, is strongly dependent on temperature, with cold conditions exacerbating charge-transfer bottlenecks and increasing the risk of interfacial breakdown\\. [2](https://arxiv.org/abs/2512.15440)\n\nOperating lithium-ion batteries at low temperatures can lead to severe overpotentials and rapid impedance rise, significantly reducing service life compared to operation at ambient temperatures\\. [2](https://arxiv.org/abs/2512.15440)"
+      },
+      {
+        "id": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9:block:3",
+        "markdown": "## Operational Conditions and Uncertainty\n\nFor stationary energy storage, both lithium-ion and sodium-ion systems benefit from operation at mild C-rates and ambient temperatures to maintain long-term reliability and reduce side reactions\\. [2](https://arxiv.org/abs/2512.15440)\n\nThe commercial viability of sodium-ion batteries remains in early stages, with ongoing research required to address challenges like electrolyte instability and capacity fading to reach performance levels competitive with established lithium-ion technologies\\. [6](https://arxiv.org/abs/2504.19299)"
+      },
+      {
+        "id": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9:block:4",
+        "markdown": "## Further Reading\n\nAdvanced modeling frameworks and meta-analyses of capacity-rate data are currently being used to quantify performance characteristics and diagnose degradation mechanisms in both lithium-ion and emerging battery chemistries\\. [3](https://arxiv.org/abs/2512.14191)\n\nResearch into battery thermal management systems, including integrated surface and tab cooling, provides insight into how operational protocols can mitigate thermal gradients and extend the service life of stationary storage systems\\. [4](https://arxiv.org/abs/2607.10872)"
+      }
+    ]
+  },
+  "report": "## Cycle Life Comparison\n\nLithium-ion batteries are widely recognized for their long cycling stability, which has historically made them a standard for energy storage applications\\. [1](https://arxiv.org/abs/2604.24683)\n\nSodium-ion batteries generally exhibit inferior cycle life compared to lithium-ion counterparts, though specific cathode materials like polyanionic compounds are being developed to improve long-term stability\\. [1](https://arxiv.org/abs/2604.24683)\n\nCertain phosphate-based polyanionic cathodes for sodium-ion batteries have demonstrated robust structural stability, with some materials achieving thousands of cycles in experimental settings\\. [6](https://arxiv.org/abs/2504.19299)\n\n## Low-Temperature Performance\n\nLithium-ion battery performance, including lifespan and charge acceptance, is strongly dependent on temperature, with cold conditions exacerbating charge-transfer bottlenecks and increasing the risk of interfacial breakdown\\. [2](https://arxiv.org/abs/2512.15440)\n\nOperating lithium-ion batteries at low temperatures can lead to severe overpotentials and rapid impedance rise, significantly reducing service life compared to operation at ambient temperatures\\. [2](https://arxiv.org/abs/2512.15440)\n\n## Operational Conditions and Uncertainty\n\nFor stationary energy storage, both lithium-ion and sodium-ion systems benefit from operation at mild C-rates and ambient temperatures to maintain long-term reliability and reduce side reactions\\. [2](https://arxiv.org/abs/2512.15440)\n\nThe commercial viability of sodium-ion batteries remains in early stages, with ongoing research required to address challenges like electrolyte instability and capacity fading to reach performance levels competitive with established lithium-ion technologies\\. [6](https://arxiv.org/abs/2504.19299)\n\n## Further Reading\n\nAdvanced modeling frameworks and meta-analyses of capacity-rate data are currently being used to quantify performance characteristics and diagnose degradation mechanisms in both lithium-ion and emerging battery chemistries\\. [3](https://arxiv.org/abs/2512.14191)\n\nResearch into battery thermal management systems, including integrated surface and tab cooling, provides insight into how operational protocols can mitigate thermal gradients and extend the service life of stationary storage systems\\. [4](https://arxiv.org/abs/2607.10872)",
+  "error": null,
+  "usage": [
+    {
+      "operationId": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9:search:q1:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 20000,
+      "costMicros": 938,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_f60888cc-8cbf-44e4-95b5-f017057cf025"
+    },
+    {
+      "operationId": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9:search:q2:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 20000,
+      "costMicros": 313,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_575bd75c-a8cb-4ade-bb3d-36e8bf8ea805"
+    },
+    {
+      "operationId": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9:search:q3:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 20000,
+      "costMicros": 938,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_e2320156-40ae-48c0-86ac-58cddb96ec4b"
+    },
+    {
+      "operationId": "881a2ac6-8e30-4561-b13e-2cd9ba5ea6c9:model:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 30000,
+      "costMicros": 4156,
+      "basis": "estimate",
+      "detail": "Vertex usage: 9718 input, 899 output, 0 thought tokens"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-11-02T16:24:54.144Z",
+      "stage": "queued",
+      "message": "Research queued"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-11-02T16:24:54.695Z",
+      "stage": "searching",
+      "message": "Finding relevant evidence"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-11-02T16:24:55.479Z",
+      "stage": "searching",
+      "message": "3 sources found for this search"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-11-02T16:24:56.090Z",
+      "stage": "searching",
+      "message": "1 sources found for this search"
+    },
+    {
+      "sequence": 11,
+      "at": "2026-11-02T16:24:56.771Z",
+      "stage": "searching",
+      "message": "3 sources found for this search"
+    },
+    {
+      "sequence": 12,
+      "at": "2026-11-02T16:24:56.903Z",
+      "stage": "writing",
+      "message": "Putting the evidence together"
+    },
+    {
+      "sequence": 18,
+      "at": "2026-11-02T16:25:00.484Z",
+      "stage": "checking",
+      "message": "Checking source links and report structure"
+    },
+    {
+      "sequence": 19,
+      "at": "2026-11-02T16:25:00.574Z",
+      "stage": "complete",
+      "message": "Evidence brief ready"
+    }
+  ],
+  "traceId": "e526c4ddce65f0312ce71175c7554699",
+  "timings": {
+    "totalMs": 6430,
+    "firstBlockMs": 4335,
+    "firstSourcesMs": 1335,
+    "workerMs": 5897
+  }
+}

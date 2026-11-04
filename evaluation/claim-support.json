@@ -1,0 +1,168 @@
+{
+  "description": "Reviewed claim-to-passage cases for the independent passage checker. A coding agent selected and labelled them; they are not an independent scientific benchmark. Run scripts/evaluate-claims.ts before changing the checker or synthesis prompt, model or thinking settings.",
+  "groups": [
+    {
+      "name": "guidance-and-supplier",
+      "question": "What operating conditions does the retained guidance describe, and what cycle-life range does the supplier comparison claim?",
+      "frame": {
+        "intent": "evidence",
+        "facets": [
+          {
+            "id": "f1",
+            "ask": "What operating conditions are described?",
+            "required": true
+          },
+          {
+            "id": "f2",
+            "ask": "What cycle-life range does the supplier claim?",
+            "required": true
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "guidance",
+          "title": "Saved generic lithium-ion operating guidance",
+          "url": "https://arxiv.org/abs/2512.15440",
+          "publishedAt": "2025",
+          "sourceType": "paper"
+        },
+        {
+          "id": "supplier",
+          "title": "Sodium-Ion Battery vs Lithium-Ion Battery: Complete Researcher’s Comparison",
+          "url": "https://www.canrud.com/knowledge/battery-process/sodium-ion-battery-vs-lithium-ion-battery-complete-researcher-s-comparison-155",
+          "publishedAt": "2026-07-14",
+          "sourceType": "web"
+        }
+      ],
+      "cases": [
+        {
+          "id": "mixed-claim",
+          "sourceId": "guidance",
+          "passage": "Stationary Energy Storage Systems (ESS): Prioritize calendar life and reliability over energy density. Operation at mild C-rates (≤0.5C) and ambient temperatures is optimal.",
+          "claim": "Stationary storage guidance recommends mild C-rates and ambient temperatures. Separately, lithium iron phosphate pouch testing found surface cooling slowed degradation over 103 cycles at 2C.",
+          "expect": "withheld",
+          "why": "The second sentence has no support in the passage."
+        },
+        {
+          "id": "guidance-supported",
+          "sourceId": "guidance",
+          "passage": "Stationary Energy Storage Systems (ESS): Prioritize calendar life and reliability over energy density. Operation at mild C-rates (≤0.5C) and ambient temperatures is optimal.",
+          "claim": "The guidance recommends operating stationary storage at mild C-rates of 0.5C or below and ambient temperatures.",
+          "expect": "supported"
+        },
+        {
+          "id": "supplier-proven",
+          "sourceId": "supplier",
+          "passage": "LFP’s 6,000–8,000-cycle durability",
+          "claim": "LFP offers proven cycle life of 6,000 to 8,000 cycles.",
+          "expect": "withheld",
+          "why": "A supplier figure without measurement basis is not proven performance."
+        },
+        {
+          "id": "supplier-attributed",
+          "sourceId": "supplier",
+          "passage": "LFP’s 6,000–8,000-cycle durability",
+          "claim": "The supplier comparison lists a cycle-life range of 6,000 to 8,000 cycles for LFP.",
+          "expect": "supported"
+        }
+      ]
+    },
+    {
+      "name": "sodium-ion-stationary",
+      "question": "What evidence supports sodium-ion batteries for stationary grid storage?",
+      "frame": {
+        "intent": "evidence",
+        "facets": [
+          {
+            "id": "f1",
+            "ask": "What features support sodium-ion batteries for stationary grid storage?",
+            "required": true
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "review",
+          "title": "Sodium-Ion Batteries: Linking Liquid and Solid-State Electrolytes, Electrode Compatibility, and Commercial Viability",
+          "url": "https://doi.org/10.3390/batteries12080303",
+          "publishedAt": "2026-08-12",
+          "sourceType": "paper"
+        }
+      ],
+      "cases": [
+        {
+          "id": "cold-climate-supported",
+          "sourceId": "review",
+          "passage": "## 5. From Fundamental Electrolyte Chemistry to Practical Cell Engineering: Design Principles and Remaining Challenges\nConcentrated and localized-concentration formulations can increase anion participation and alter interphase chemistry, but their benefits must be weighed against viscosity, cost, wettability, and reduced low-temperature conductivity. Low-temperature performance is currently the clearest commercial advantage of sodium-ion technology, and it is the basis for its early deployment in cold-climate stationary storage and hybrid vehicle packs.\n\n## 6. Future Directions\nSIB advantages make them more compelling for stationary storage, grid services, low-temperature operation, and selected mobility applications where cost, lifetime, and resilience outweigh maximum gravimetric energy density.",
+          "claim": "Low-temperature performance provides a commercial advantage for sodium-ion technology, driving its early deployment in cold-climate stationary energy storage installations.",
+          "expect": "supported"
+        },
+        {
+          "id": "energy-density-supported",
+          "sourceId": "review",
+          "passage": "The principal cathode and anode families are then evaluated in terms of practical voltage, reversible capacity, cycling stability, raw-material exposure, manufacturability, and end-of-life implications. A distinctive contribution of this work is the explicit separation of thermodynamic predictions, laboratory measurements, prototype demonstrations, and company-reported targets, together with design rules that connect electrolyte chemistry to cell-level performance.\n\n## 1. Introduction\nAlthough SIBs exhibit lower energy density due to the higher atomic mass and larger ionic radius of sodium, their advantages in cost, sustainability and operational safety make them particularly attractive for stationary energy storage and grid-scale applications, where weight and energy density are less critical [4,23].",
+          "claim": "Lower energy density in sodium-ion batteries is less critical for stationary storage and grid-scale applications where cost, operational safety, and sustainability are prioritized over gravimetric limits.",
+          "expect": "supported"
+        },
+        {
+          "id": "cold-climate-overreach",
+          "sourceId": "review",
+          "passage": "## 5. From Fundamental Electrolyte Chemistry to Practical Cell Engineering: Design Principles and Remaining Challenges\nConcentrated and localized-concentration formulations can increase anion participation and alter interphase chemistry, but their benefits must be weighed against viscosity, cost, wettability, and reduced low-temperature conductivity. Low-temperature performance is currently the clearest commercial advantage of sodium-ion technology, and it is the basis for its early deployment in cold-climate stationary storage and hybrid vehicle packs.\n\n## 6. Future Directions\nSIB advantages make them more compelling for stationary storage, grid services, low-temperature operation, and selected mobility applications where cost, lifetime, and resilience outweigh maximum gravimetric energy density.",
+          "claim": "Sodium-ion batteries outperform lithium iron phosphate batteries in cold-climate grid storage.",
+          "expect": "withheld",
+          "why": "The passage makes no comparison with lithium iron phosphate."
+        },
+        {
+          "id": "absence-claim",
+          "sourceId": "review",
+          "passage": "The principal cathode and anode families are then evaluated in terms of practical voltage, reversible capacity, cycling stability, raw-material exposure, manufacturability, and end-of-life implications. A distinctive contribution of this work is the explicit separation of thermodynamic predictions, laboratory measurements, prototype demonstrations, and company-reported targets, together with design rules that connect electrolyte chemistry to cell-level performance.\n\n## 1. Introduction\nAlthough SIBs exhibit lower energy density due to the higher atomic mass and larger ionic radius of sodium, their advantages in cost, sustainability and operational safety make them particularly attractive for stationary energy storage and grid-scale applications, where weight and energy density are less critical [4,23].",
+          "claim": "No study has compared sodium-ion and lithium iron phosphate batteries for grid storage.",
+          "expect": "withheld",
+          "why": "One passage cannot establish absence across the literature."
+        }
+      ]
+    },
+    {
+      "name": "cathode-table",
+      "question": "What cycle life do phosphate polyanion cathodes for sodium-ion batteries report?",
+      "frame": {
+        "intent": "evidence",
+        "facets": [
+          {
+            "id": "f1",
+            "ask": "What cycle life do phosphate polyanion cathodes report?",
+            "required": true
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "table",
+          "title": "Synergistic Role of Transition Metals and Polyanionic Frameworks in Phosphate-Based Cathode Materials for Sodium-Ion Batteries",
+          "url": "https://arxiv.org/abs/2504.19299",
+          "publishedAt": "2025-04-27",
+          "sourceType": "paper"
+        }
+      ],
+      "cases": [
+        {
+          "id": "table-row-supported",
+          "sourceId": "table",
+          "passage": "Table V\n| Formula C-rate |  | Initial discharge | Retention | No. of cycles | Ref. |\n| --- | --- | --- | --- | --- | --- |\n| capacity (mAh/g) |  |  | (%) |  |  |\n| (PO4)(P2O7) |  |  |  |  |  |\n| Na4Fe3(PO4)2(P2O7) | 20 | 80.3 | 69.1 | 4400 | [131] |\n| Na4Mn3(PO4)2(P2O7) | 0.2 | ∼85 | 86 | 100 | [129] |\n| Na4MnFe2(PO4)2(P2O7) | 1 | ∼80 | 83 | 3000 | [132] |\n| Na7V4(P2O7)4PO4 | 0.5 | 92 | 92.1 | 300 | [137] |\n| Na3Fe2(PO4)(P2O7) | 20 | 61.6 | 89.7 | 6400 | [140] |\n| Na3Mn2(PO4)(P2O7) | 5 | 32 | 73 | 500 | [141] |\n| Na3MnFe(PO4)(P2O7) | 5 | 60 | 65.5 | 1000 | [138] |",
+          "claim": "Phosphate polyanion materials such as Na3Fe2(PO4)(P2O7) have achieved 89.7 percent retention after 6400 cycles at a 20 C-rate in reported cathode assessments.",
+          "expect": "supported"
+        },
+        {
+          "id": "table-row-swapped",
+          "sourceId": "table",
+          "passage": "Table V\n| Formula C-rate |  | Initial discharge | Retention | No. of cycles | Ref. |\n| --- | --- | --- | --- | --- | --- |\n| capacity (mAh/g) |  |  | (%) |  |  |\n| (PO4)(P2O7) |  |  |  |  |  |\n| Na4Fe3(PO4)2(P2O7) | 20 | 80.3 | 69.1 | 4400 | [131] |\n| Na4Mn3(PO4)2(P2O7) | 0.2 | ∼85 | 86 | 100 | [129] |\n| Na4MnFe2(PO4)2(P2O7) | 1 | ∼80 | 83 | 3000 | [132] |\n| Na7V4(P2O7)4PO4 | 0.5 | 92 | 92.1 | 300 | [137] |\n| Na3Fe2(PO4)(P2O7) | 20 | 61.6 | 89.7 | 6400 | [140] |\n| Na3Mn2(PO4)(P2O7) | 5 | 32 | 73 | 500 | [141] |\n| Na3MnFe(PO4)(P2O7) | 5 | 60 | 65.5 | 1000 | [138] |",
+          "claim": "Na3Mn2(PO4)(P2O7) has achieved 89.7 percent retention after 6400 cycles at a 20 C-rate in reported cathode assessments.",
+          "expect": "withheld",
+          "why": "Those values belong to Na3Fe2(PO4)(P2O7), the neighbouring row."
+        }
+      ],
+      "note": "Table V of the cited paper with its column headers restored from the retained excerpt, so the control establishes C-rate, retention and cycle count."
+    }
+  ]
+}

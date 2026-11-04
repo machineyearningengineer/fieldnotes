@@ -1,0 +1,10 @@
+{
+  "ignorePatterns": [
+    "sources/**",
+    "reviews/**",
+    "backend/**",
+    "pnpm-lock.yaml",
+    "**/.next/**",
+    ".scratch/**"
+  ]
+}

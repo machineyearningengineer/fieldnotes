@@ -1,0 +1,64 @@
+/* Paired OKLCH palettes. light-dark follows color-scheme; dark is designed independently. */
+:root {
+  color-scheme: light dark;
+  --paper: light-dark(oklch(98% 0.012 87), oklch(21% 0.009 255));
+  --sheet: light-dark(oklch(99.2% 0.006 87), oklch(26% 0.01 255));
+  --ink: light-dark(oklch(29% 0.021 62), oklch(94% 0.012 85));
+  --ink-soft: light-dark(oklch(44% 0.018 65), oklch(84% 0.009 255));
+  --ink-muted: light-dark(oklch(49% 0.015 65), oklch(76% 0.009 255));
+  --line: light-dark(oklch(86% 0.02 82), oklch(42% 0.012 255));
+  --line-strong: light-dark(oklch(58% 0.023 75), oklch(65% 0.012 255));
+  --brand: light-dark(oklch(39% 0.067 179), oklch(79% 0.085 172));
+  --brand-hover: light-dark(oklch(32% 0.06 179), oklch(87% 0.07 172));
+  --brand-wash: light-dark(oklch(94% 0.025 163), oklch(29% 0.029 172));
+  --on-brand: light-dark(oklch(99% 0.005 87), oklch(19% 0.017 172));
+  --caution: light-dark(oklch(45% 0.082 65), oklch(82% 0.08 75));
+  --caution-wash: light-dark(oklch(95% 0.025 65), oklch(27% 0.025 65));
+  --danger: light-dark(oklch(45% 0.12 30), oklch(81% 0.09 30));
+  --focus: var(--brand);
+  --selection: light-dark(oklch(88% 0.07 160), oklch(37% 0.05 170));
+  --shadow: light-dark(oklch(20% 0.01 60 / 0.09), oklch(5% 0.01 60 / 0.3));
+  --overlay: light-dark(oklch(20% 0.01 60 / 0.18), oklch(5% 0.01 60 / 0.55));
+  --font-body: "Source Sans 3 Variable", system-ui, sans-serif;
+  --font-report: "Source Serif 4 Variable", Georgia, serif;
+  --font-note: "Kevin Sans", cursive;
+  --font-hand: var(--font-note);
+  --font-script: var(--font-note);
+  --font-mono: ui-monospace, monospace;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --measure: 690px;
+  /* Map the owned drawing primitives onto the app's semantic palette. */
+  --ll-marker: var(--brand);
+  --ll-ink: var(--ink);
+  --ll-ink-muted: var(--ink-muted);
+  --ll-pencil: var(--ink-muted);
+  --ll-pencil-text: var(--ink-muted);
+  --ll-pencil-mark: var(--line-strong);
+  --ll-slip: var(--sheet);
+  --ll-paper: var(--paper);
+  --ll-paper-shade: var(--line);
+  --ll-photo: var(--sheet);
+  --ll-overlay-dim: var(--overlay);
+  --ll-link: var(--brand);
+  --ll-link-hover: var(--brand-hover);
+  --highlight: light-dark(oklch(88% 0.095 91), oklch(39% 0.045 85));
+  --ll-hi: var(--highlight);
+  --primary-foreground: var(--on-brand);
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --popover: var(--sheet);
+  --popover-foreground: var(--ink);
+  --accent: var(--brand-wash);
+  --accent-foreground: var(--ink);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+@media print {
+  :root {
+    color-scheme: light !important;
+  }
+}

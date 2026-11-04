@@ -1,0 +1,240 @@
+{
+  "id": "71c71835-068b-4450-b9ae-621347d86992",
+  "report": "## Direct Performance and Cost Evidence for Sodium-Ion Batteries\n\nSodium-ion battery technology is approaching the energy density performance of commercial lithium-ion batteries and is projected to deliver lower prices compared to lithium-ion systems as academic and start-up developments progress\\. [1](https://arxiv.org/abs/2005.04963)\n\nThe theoretical cell parameters for average positive electrodes in sodium-ion chemistry versus sodium metal are estimated around 3\\.3 volts, a specific capacity of approximately 170 milliamp-hours per gram, and a theoretical gravimetric energy density of roughly 560 watt-hours per kilogram\\. [2](https://arxiv.org/abs/2505.04391)\n\n## Uncertainties and Technical Bottlenecks\n\nThe long-term lifespan and cyclability of sodium-ion batteries require substantial improvement, although recent developments in positive electrode materials indicate potential advantages over lithium-ion electrodes if scaled up successfully\\. [1](https://arxiv.org/abs/2005.04963)\n\nAssessing beyond-lithium battery chemistries accurately requires establishing end-of-life energy density, long-term degradation mechanisms, and interfacial stability under varied practical operating conditions\\. [1](https://arxiv.org/abs/2005.04963)\n\n## Distinction from Alternative Sodium Chemistries and Grid-Level Gaps\n\nHigh theoretical energy density sodium-sulphur and sodium-oxygen batteries operate via conversion reactions rather than the insertion and de-insertion mechanisms used in conventional sodium-ion cells, and while investigated for grid-scale stationary storage, they face distinct technology readiness challenges\\. [2](https://arxiv.org/abs/2505.04391)\n\nThe retrieved literature on grid-connected storage focuses on technologies such as lithium-ion, sodium-sulphur, vanadium redox flow, and lead-acid, leaving direct field validation and economic assessments of sodium-ion batteries in stationary electricity markets unaddressed\\. [3](https://arxiv.org/abs/2007.00486)",
+  "createdAt": "2026-11-02T16:58:35.137Z",
+  "timings": {
+    "workerMs": 10483,
+    "firstSourcesMs": 80542,
+    "totalMs": 89138,
+    "firstBlockMs": 85521
+  },
+  "status": "succeeded",
+  "input": {
+    "kind": "discover",
+    "question": "What evidence supports sodium-ion batteries for stationary grid storage?",
+    "schemaVersion": 1
+  },
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-11-02T16:58:35.137Z",
+      "stage": "queued",
+      "message": "Research queued"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-11-02T16:59:53.811Z",
+      "stage": "searching",
+      "message": "Finding relevant evidence"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-11-02T16:59:55.679Z",
+      "stage": "searching",
+      "message": "3 sources found for this search"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-11-02T16:59:57.310Z",
+      "stage": "searching",
+      "message": "2 sources found for this search"
+    },
+    {
+      "sequence": 9,
+      "at": "2026-11-02T16:59:57.389Z",
+      "stage": "writing",
+      "message": "Putting the evidence together"
+    },
+    {
+      "sequence": 14,
+      "at": "2026-11-02T17:00:04.197Z",
+      "stage": "checking",
+      "message": "Checking source links and report structure"
+    },
+    {
+      "sequence": 15,
+      "at": "2026-11-02T17:00:04.275Z",
+      "stage": "complete",
+      "message": "Evidence brief ready"
+    }
+  ],
+  "error": null,
+  "revision": 15,
+  "schemaVersion": 1,
+  "traceId": "1a988ca5abb036a89d1769178fcc8dec",
+  "stage": "complete",
+  "reportDraft": {
+    "blocks": [
+      {
+        "id": "71c71835-068b-4450-b9ae-621347d86992:block:1",
+        "markdown": "## Direct Performance and Cost Evidence for Sodium-Ion Batteries\n\nSodium-ion battery technology is approaching the energy density performance of commercial lithium-ion batteries and is projected to deliver lower prices compared to lithium-ion systems as academic and start-up developments progress\\. [1](https://arxiv.org/abs/2005.04963)\n\nThe theoretical cell parameters for average positive electrodes in sodium-ion chemistry versus sodium metal are estimated around 3\\.3 volts, a specific capacity of approximately 170 milliamp-hours per gram, and a theoretical gravimetric energy density of roughly 560 watt-hours per kilogram\\. [2](https://arxiv.org/abs/2505.04391)"
+      },
+      {
+        "id": "71c71835-068b-4450-b9ae-621347d86992:block:2",
+        "markdown": "## Uncertainties and Technical Bottlenecks\n\nThe long-term lifespan and cyclability of sodium-ion batteries require substantial improvement, although recent developments in positive electrode materials indicate potential advantages over lithium-ion electrodes if scaled up successfully\\. [1](https://arxiv.org/abs/2005.04963)\n\nAssessing beyond-lithium battery chemistries accurately requires establishing end-of-life energy density, long-term degradation mechanisms, and interfacial stability under varied practical operating conditions\\. [1](https://arxiv.org/abs/2005.04963)"
+      },
+      {
+        "id": "71c71835-068b-4450-b9ae-621347d86992:block:3",
+        "markdown": "## Distinction from Alternative Sodium Chemistries and Grid-Level Gaps\n\nHigh theoretical energy density sodium-sulphur and sodium-oxygen batteries operate via conversion reactions rather than the insertion and de-insertion mechanisms used in conventional sodium-ion cells, and while investigated for grid-scale stationary storage, they face distinct technology readiness challenges\\. [2](https://arxiv.org/abs/2505.04391)\n\nThe retrieved literature on grid-connected storage focuses on technologies such as lithium-ion, sodium-sulphur, vanadium redox flow, and lead-acid, leaving direct field validation and economic assessments of sodium-ion batteries in stationary electricity markets unaddressed\\. [3](https://arxiv.org/abs/2007.00486)"
+      }
+    ]
+  },
+  "queries": [
+    {
+      "id": "q1",
+      "query": "What evidence supports sodium-ion batteries for stationary grid storage? academic studies review",
+      "purpose": "Find the main research evidence",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-a505adb6592109805ba4a87d",
+        "s-a505adb6592109805ba4a87d",
+        "s-9682b3c268446618c5781dde"
+      ]
+    },
+    {
+      "id": "q2",
+      "query": "What evidence supports sodium-ion batteries for stationary grid storage? limitations conflicting evidence",
+      "purpose": "Look for uncertainty and disagreement",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-2c775ae7c8ae493f3c5085b6",
+        "s-2d70ebca5a106083a8a14fae"
+      ]
+    }
+  ],
+  "updatedAt": "2026-11-02T17:00:04.275Z",
+  "usage": [
+    {
+      "operationId": "71c71835-068b-4450-b9ae-621347d86992:search:q1:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 10000,
+      "costMicros": 938,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_4fb57d8a-861b-4bbc-b0f1-a385bca3e9c0"
+    },
+    {
+      "operationId": "71c71835-068b-4450-b9ae-621347d86992:search:q2:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 10000,
+      "costMicros": 625,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_4f504efb-c2f2-4875-b26e-69d8ae254dfe"
+    },
+    {
+      "operationId": "71c71835-068b-4450-b9ae-621347d86992:model:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 60000,
+      "costMicros": 8919,
+      "basis": "estimate",
+      "detail": "Vertex gemini-3.8-flash usage: 7345 input, 693 output, 0 thought tokens"
+    }
+  ],
+  "expiresAt": "2026-11-02T17:03:35.137Z",
+  "simulation": false,
+  "sources": [
+    {
+      "id": "s-a505adb6592109805ba4a87d",
+      "title": "Exploits, advances and challenges benefiting beyond Li-ion battery technologies",
+      "url": "https://arxiv.org/abs/2005.04963",
+      "authors": [
+        "Abdel El Kharbachi",
+        "Olena Zavorotynska",
+        "M. Latroche",
+        "Ferm\u00edn Cuevas",
+        "V.A. Yartys",
+        "Maximilian Fichtner"
+      ],
+      "publishedAt": "2019-12-03",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "The present market of mobile devices and electric transportation technologies is undergoing expansion in terms of the need for high energy density and safe rechargeable batteries. The most promising post-Li ion electrochemical storage systems are addressed in this Review. Table 2",
+      "metadata": {
+        "doi": "https://doi.org/10.1016/j.jallcom.2019.153261",
+        "citation": "Abdel El Kharbachi et al. (2019). Exploits, advances and challenges benefiting beyond Li-ion battery technologies.https://doi.org/10.1016/j.jallcom.2019.153261",
+        "price": 0.0003125,
+        "relevanceScore": 0.6714906775392303
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-9682b3c268446618c5781dde",
+      "title": "Advancements in Solid-State Sodium-Based Batteries: A Comprehensive Review",
+      "url": "https://arxiv.org/abs/2505.04391",
+      "authors": [
+        "Arianna Massaro",
+        "Lorenzo Squillantini",
+        "Francesca De Giorgio",
+        "Francesca A. Scaramuzzo",
+        "Mauro Pasquali",
+        "Sergio Brutti"
+      ],
+      "publishedAt": "2025-05-07",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "<Back> - 6. Conclusions and forward",
+      "metadata": {
+        "doi": "",
+        "citation": "Arianna Massaro et al. (2025). Advancements in Solid-State Sodium-Based Batteries: A Comprehensive Review.https://arxiv.org/abs/2505.04391",
+        "price": 0.0003125,
+        "relevanceScore": 0.6231276740388945
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-2c775ae7c8ae493f3c5085b6",
+      "title": "Barriers to grid-connected battery systems: Evidence from the Spanish electricity market",
+      "url": "https://arxiv.org/abs/2007.00486",
+      "authors": [
+        "Yu Hu",
+        "David Soler Soneira",
+        "Mar\u00eda Manzano"
+      ],
+      "publishedAt": "2020-06-28",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Electrical energy storage is considered essential for the future energy systems. Among all the energy storage technologies, battery systems may provide flexibility to the power grid in a more distributed and decentralized way. In countries with deregulated electricity markets, gr",
+      "metadata": {
+        "doi": "",
+        "citation": "Yu Hu et al. (2020). Barriers to grid-connected battery systems: Evidence from the Spanish electricity market.https://arxiv.org/abs/2007.00486",
+        "price": 0.0003125,
+        "relevanceScore": 0.5811782325115258
+      },
+      "queryIds": [
+        "q2"
+      ]
+    },
+    {
+      "id": "s-2d70ebca5a106083a8a14fae",
+      "title": "Battery selection for optimal grid-outage resilient photovoltaic and battery systems",
+      "url": "https://arxiv.org/abs/1901.11389",
+      "authors": [
+        "Stamatis Tsianikas",
+        "Jian Zhou",
+        "Nooshin Yousefi",
+        "David W. Coit"
+      ],
+      "publishedAt": "2019-01-01",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "The first and most important purpose of the current research work is to investigate the effects that different battery types have on the optimal configuration of photovoltaic (PV) and battery systems, from both economic and resilience perspectives. Many industry reports, as well ",
+      "metadata": {
+        "doi": "https://doi.org/10.48550/arxiv.1901.11389",
+        "citation": "Stamatis Tsianikas et al. (2019). Battery selection for optimal grid-outage resilient photovoltaic and battery systems.https://doi.org/10.48550/arxiv.1901.11389",
+        "price": 0.0003125,
+        "relevanceScore": 0.5349794534116485
+      },
+      "queryIds": [
+        "q2"
+      ]
+    }
+  ]
+}

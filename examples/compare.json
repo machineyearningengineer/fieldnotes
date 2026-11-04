@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "id": "7a53df82-ce55-447a-8092-e93aa0d4953d",
+  "input": {
+    "schemaVersion": 1,
+    "kind": "compare",
+    "question": "How do cycle life and low-temperature performance compare for stationary grid storage?",
+    "alternatives": [
+      "sodium-ion",
+      "lithium iron phosphate"
+    ]
+  },
+  "status": "succeeded",
+  "outcome": "unanswered",
+  "stage": "complete",
+  "revision": 24,
+  "createdAt": "2026-11-02T23:21:44.733Z",
+  "updatedAt": "2026-11-02T23:22:06.194Z",
+  "expiresAt": "2026-11-02T23:26:44.733Z",
+  "simulation": false,
+  "queries": [
+    {
+      "id": "q1",
+      "query": "sodium-ion How do cycle life and low-temperature performance compare for stationary grid storage?",
+      "purpose": "Evidence for sodium-ion",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-746abf3905cb95be76e96901",
+        "s-a7a14b3abacf4fdd022c2503",
+        "s-9682b3c268446618c5781dde"
+      ]
+    },
+    {
+      "id": "q2",
+      "query": "lithium iron phosphate How do cycle life and low-temperature performance compare for stationary grid storage?",
+      "purpose": "Evidence for lithium iron phosphate",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-b0a32eee722622e4f63da0f9",
+        "s-3b65d4fd7f6f20cd995406c0"
+      ]
+    },
+    {
+      "id": "q3",
+      "query": "sodium-ion versus lithium iron phosphate How do cycle life and low-temperature performance compare for stationary grid storage? limitations comparative studies",
+      "purpose": "Comparable conditions and limitations",
+      "sourceType": "web",
+      "status": "complete",
+      "sourceIds": [
+        "s-0453d665d8f737310884e9a5",
+        "s-5a2e376873862ce461ac7845",
+        "s-9dad39696d607498849b6077"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s-746abf3905cb95be76e96901",
+      "title": "A Multiphysics-Coupled DeepONet Framework for Predicting Sodium Dendrite Growth in Wide-Temperature Sodium-Ion Capacitors",
+      "url": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15006483/v1",
+      "authors": [
+        "Jing Yang",
+        "YiFan Hao"
+      ],
+      "publishedAt": "2026-07-23",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "The escalating global demand for renewable energy integration and electric vehicles necessitates the development of cost-effective, safe, and high-performance energy storage systems capable of oper...",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 10557,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 1061
+            },
+            {
+              "start": 1062,
+              "end": 2084
+            },
+            {
+              "start": 2085,
+              "end": 3077
+            },
+            {
+              "start": 4144,
+              "end": 5194
+            },
+            {
+              "start": 8051,
+              "end": 9121
+            }
+          ]
+        },
+        "retrievalRank": 0,
+        "providerSource": "valyu/valyu-chemrxiv",
+        "doi": "10.26434/chemrxiv.15006483/v1",
+        "citation": "Jing Yang & YiFan Hao (2026). A Multiphysics-Coupled DeepONet Framework for Predicting Sodium Dendrite Growth in Wide-Temperature Sodium-Ion Capacitors.https://doi.org/10.26434/chemrxiv.15006483/v1",
+        "price": 0.005,
+        "relevanceScore": 0.6998306615319577
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-a7a14b3abacf4fdd022c2503",
+      "title": "Synergistic Role of Transition Metals and Polyanionic Frameworks in Phosphate-Based Cathode Materials for Sodium-Ion Batteries",
+      "url": "https://arxiv.org/abs/2504.19299",
+      "authors": [
+        "Madhav Sharma",
+        "Riya Gulati",
+        "Rajendra S. Dhaka"
+      ],
+      "publishedAt": "2025-04-27",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Ongoing research in the area of advanced cathode materials for sodium-ion batteries (SIBs) is expected to reduce reliance on lithium-ion batteries (LIBs), providing more affordable and sustainable energy storage solutions. Polyanionic compounds have emerged as promising options d",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 5847,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 5847
+            }
+          ]
+        },
+        "retrievalRank": 1,
+        "providerSource": "valyu/valyu-arxiv",
+        "doi": "",
+        "citation": "Madhav Sharma et al. (2025). Synergistic Role of Transition Metals and Polyanionic Frameworks in Phosphate-Based Cathode Materials for Sodium-Ion Batteries.https://arxiv.org/abs/2504.19299",
+        "price": 0.0003125,
+        "relevanceScore": 0.6436721650494354
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-9682b3c268446618c5781dde",
+      "title": "Advancements in Solid-State Sodium-Based Batteries: A Comprehensive Review",
+      "url": "https://arxiv.org/abs/2505.04391",
+      "authors": [
+        "Arianna Massaro",
+        "Lorenzo Squillantini",
+        "Francesca De Giorgio",
+        "Francesca A. Scaramuzzo",
+        "Mauro Pasquali",
+        "Sergio Brutti"
+      ],
+      "publishedAt": "2025-05-07",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "<Back> - 6. Conclusions and forward",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 5786,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 5786
+            }
+          ]
+        },
+        "retrievalRank": 2,
+        "providerSource": "valyu/valyu-arxiv",
+        "doi": "",
+        "citation": "Arianna Massaro et al. (2025). Advancements in Solid-State Sodium-Based Batteries: A Comprehensive Review.https://arxiv.org/abs/2505.04391",
+        "price": 0.0003125,
+        "relevanceScore": 0.6191719746001249
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-b0a32eee722622e4f63da0f9",
+      "title": "Practical pathways to higher energy density LMFP battery cathodes",
+      "url": "https://chemrxiv.org/doi/full/10.26434/chemrxiv-2024-nsm2q-v2",
+      "authors": [],
+      "publishedAt": "2024-12-19",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "The design of new lithium-ion battery (LIB) cathode materials must balance many factors: performance, cost, manufacturability, safety, critical mineral usage and geopolitical constraints. Recently commercialised LiMnxFe1-xPO4 (LMFP) materials offer good energy density & stability",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 7123,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 725
+            },
+            {
+              "start": 726,
+              "end": 1525
+            },
+            {
+              "start": 1527,
+              "end": 2266
+            },
+            {
+              "start": 2268,
+              "end": 2973
+            },
+            {
+              "start": 3885,
+              "end": 4765
+            }
+          ]
+        },
+        "retrievalRank": 0,
+        "providerSource": "valyu/valyu-chemrxiv",
+        "doi": "10.26434/chemrxiv-2024-nsm2q-v2",
+        "citation": "Anonymous (2024). Practical pathways to higher energy density LMFP battery cathodes.https://doi.org/10.26434/chemrxiv-2024-nsm2q-v2",
+        "price": 0.005,
+        "relevanceScore": 0.6259485136727744
+      },
+      "queryIds": [
+        "q2"
+      ]
+    },
+    {
+      "id": "s-3b65d4fd7f6f20cd995406c0",
+      "title": "Synthesis and Characterization of a LiFe<sub>0.6</sub>Mn<sub>0.4</sub>PO<sub>4</sub> Olivine Cathode for Application in a New Lithium Polymer Battery",
+      "url": "https://arxiv.org/abs/2203.05414",
+      "authors": [
+        "Luca Minnetti",
+        "Vittorio Marangon",
+        "Jusef Hassoun"
+      ],
+      "publishedAt": "2022-02-25",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "A LiFe0.6Mn0.4PO4 (LFMP) cathode exploiting the olivine structure is herein synthesized and characterized in terms of structure, morphology and electrochemical features in lithium cell. The material shows a relevant reversibility of the electrochemical process which evolves at 3.",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 7435,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 1093
+            },
+            {
+              "start": 1094,
+              "end": 2188
+            },
+            {
+              "start": 2189,
+              "end": 3282
+            },
+            {
+              "start": 3283,
+              "end": 4264
+            },
+            {
+              "start": 4265,
+              "end": 5224
+            }
+          ]
+        },
+        "retrievalRank": 1,
+        "providerSource": "valyu/valyu-arxiv",
+        "doi": "https://doi.org/10.1002/adsu.202100464",
+        "citation": "Luca Minnetti et al. (2022). Synthesis and Characterization of a LiFe<sub>0.6</sub>Mn<sub>0.4</sub>PO<sub>4</sub> Olivine Cathode for Application in a New Lithium Polymer Battery.https://doi.org/10.1002/adsu.202100464",
+        "price": 0.0003125,
+        "relevanceScore": 0.6138452089561035
+      },
+      "queryIds": [
+        "q2"
+      ]
+    },
+    {
+      "id": "s-0453d665d8f737310884e9a5",
+      "title": "Sodium-Ion vs LFP for Grid Storage: Researcher View",
+      "url": "https://www.canrud.com/knowledge/battery-process/sodium-ion-vs-lfp-for-grid-storage-researcher-view-351",
+      "authors": [],
+      "publishedAt": "2026-10-14",
+      "sourceType": "website",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Canrud October 14, 2026 16",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 9423,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 962
+            },
+            {
+              "start": 964,
+              "end": 1667
+            },
+            {
+              "start": 2467,
+              "end": 3436
+            },
+            {
+              "start": 5410,
+              "end": 6341
+            },
+            {
+              "start": 6343,
+              "end": 7219
+            }
+          ]
+        },
+        "retrievalRank": 0,
+        "providerSource": "web",
+        "price": 0.000625,
+        "relevanceScore": 0.9609367285307702
+      },
+      "queryIds": [
+        "q3"
+      ]
+    },
+    {
+      "id": "s-5a2e376873862ce461ac7845",
+      "title": "LFP vs Sodium Ion Battery Technical Comparison | jmenergytech",
+      "url": "https://www.jmenergytech.com/blog/lfp-vs-sodium-ion-battery-technical-comparison.html",
+      "authors": [],
+      "publishedAt": "2026-11-02",
+      "sourceType": "website",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "[[Image: LFP vs sodium\u2011ion battery flat vector comparison illustration]](https://yunpan.cdn.site.joinf.com/5619095873495961/NiZEkzft8t.jpg)",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 9744,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 848
+            },
+            {
+              "start": 850,
+              "end": 1412
+            },
+            {
+              "start": 2936,
+              "end": 3749
+            },
+            {
+              "start": 5364,
+              "end": 6377
+            },
+            {
+              "start": 8110,
+              "end": 9199
+            }
+          ]
+        },
+        "retrievalRank": 1,
+        "providerSource": "web",
+        "price": 0.000625,
+        "relevanceScore": 0.9464233047100311
+      },
+      "queryIds": [
+        "q3"
+      ]
+    },
+    {
+      "id": "s-9dad39696d607498849b6077",
+      "title": "Sodium-Ion vs LFP for Grid Storage: 2026 Comparison",
+      "url": "https://bess.courses/articles/bess-battery-chemistry-lfp-nmc-sodium-ion/",
+      "authors": [],
+      "publishedAt": "2026-10-01",
+      "sourceType": "website",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Last verified: July 2026",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 11473,
+          "ranges": [
+            {
+              "start": 1042,
+              "end": 1643
+            },
+            {
+              "start": 1645,
+              "end": 2488
+            },
+            {
+              "start": 2490,
+              "end": 3459
+            },
+            {
+              "start": 4478,
+              "end": 5413
+            },
+            {
+              "start": 6199,
+              "end": 6931
+            }
+          ]
+        },
+        "retrievalRank": 2,
+        "providerSource": "web",
+        "price": 0.000625,
+        "relevanceScore": 0.945672805569685
+      },
+      "queryIds": [
+        "q3"
+      ]
+    }
+  ],
+  "reportDraft": {
+    "blocks": [
+      {
+        "id": "7a53df82-ce55-447a-8092-e93aa0d4953d:block:1",
+        "markdown": "## Not directly answered\n\nThe checked research records do not answer this question directly. The related findings below are background, not an answer."
+      },
+      {
+        "id": "7a53df82-ce55-447a-8092-e93aa0d4953d:block:2",
+        "markdown": "## Related evidence\n\n### Sodium-Ion Findings and Evidence Gaps\n\nPhosphate polyanionic cathode materials for sodium-ion batteries demonstrate long cycling performance in lab evaluations, reaching thousands of cycles across various compositions such as Na3V2\\(PO4\\)3 and Na3Fe2\\(PO4\\)\\(P2O7\\)\\. [2](https://arxiv.org/abs/2504.19299)"
+      },
+      {
+        "id": "7a53df82-ce55-447a-8092-e93aa0d4953d:block:3",
+        "markdown": "## Unresolved\n\nNot established by the checked claims: Direct comparison of cycle life between sodium-ion and lithium iron phosphate in stationary grid storage; Direct comparison of low-temperature performance between sodium-ion and lithium iron phosphate in stationary grid storage."
+      },
+      {
+        "id": "7a53df82-ce55-447a-8092-e93aa0d4953d:block:4",
+        "markdown": "## Evidence limits\n\n3 draft claims were withheld because support or relevance could not be established."
+      }
+    ]
+  },
+  "report": "## Not directly answered\n\nThe checked research records do not answer this question directly. The related findings below are background, not an answer.\n\n## Related evidence\n\n### Sodium-Ion Findings and Evidence Gaps\n\nPhosphate polyanionic cathode materials for sodium-ion batteries demonstrate long cycling performance in lab evaluations, reaching thousands of cycles across various compositions such as Na3V2\\(PO4\\)3 and Na3Fe2\\(PO4\\)\\(P2O7\\)\\. [2](https://arxiv.org/abs/2504.19299)\n\n## Unresolved\n\nNot established by the checked claims: Direct comparison of cycle life between sodium-ion and lithium iron phosphate in stationary grid storage; Direct comparison of low-temperature performance between sodium-ion and lithium iron phosphate in stationary grid storage.\n\n## Evidence limits\n\n3 draft claims were withheld because support or relevance could not be established.",
+  "error": null,
+  "usage": [
+    {
+      "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:search:q3:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 10000,
+      "costMicros": 1875,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_e38ac52f-bf00-4302-b03a-b15fdb1313de"
+    },
+    {
+      "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:search:q2:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 10000,
+      "costMicros": 5313,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_8ac296ca-c1b1-4cfd-8774-41a223a23818"
+    },
+    {
+      "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:search:q1:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 10000,
+      "costMicros": 5625,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_73ca5923-dd8d-43aa-bd85-4a9fe52063cb"
+    },
+    {
+      "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:model:model:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 60000,
+      "costMicros": 9512,
+      "basis": "estimate",
+      "detail": "Vertex gemini-3.8-flash usage: 9004 input, 505 output, 0 thought tokens"
+    },
+    {
+      "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:model:support-1:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 7747,
+      "costMicros": 1108,
+      "basis": "estimate",
+      "detail": "Passage check support-1: 1143 input, 40 output, 0 thought tokens"
+    },
+    {
+      "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:model:support-2:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 7941,
+      "costMicros": 1521,
+      "basis": "estimate",
+      "detail": "Passage check support-2: 1653 input, 38 output, 0 thought tokens"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-11-02T23:21:44.733Z",
+      "stage": "queued",
+      "message": "Research queued"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-11-02T23:21:45.241Z",
+      "stage": "searching",
+      "message": "Finding relevant evidence"
+    },
+    {
+      "sequence": 7,
+      "at": "2026-11-02T23:21:47.042Z",
+      "stage": "searching",
+      "message": "3 sources found for this search"
+    },
+    {
+      "sequence": 9,
+      "at": "2026-11-02T23:21:48.288Z",
+      "stage": "searching",
+      "message": "2 sources found for this search"
+    },
+    {
+      "sequence": 11,
+      "at": "2026-11-02T23:21:57.909Z",
+      "stage": "searching",
+      "message": "3 sources found for this search"
+    },
+    {
+      "sequence": 12,
+      "at": "2026-11-02T23:21:58.067Z",
+      "stage": "writing",
+      "message": "Putting the evidence together"
+    },
+    {
+      "sequence": 23,
+      "at": "2026-11-02T23:22:06.102Z",
+      "stage": "checking",
+      "message": "Checking source links and report structure"
+    },
+    {
+      "sequence": 24,
+      "at": "2026-11-02T23:22:06.194Z",
+      "stage": "complete",
+      "message": "Evidence brief ready"
+    }
+  ],
+  "traceId": "5d8ac3282fb9c6cc62786235dad9579e",
+  "timings": {
+    "searchArtifactSaveMs": 114,
+    "search_q1_ms": 528,
+    "firstSourcesMs": 2309,
+    "search_q2_ms": 1924,
+    "search_q3_ms": 12491,
+    "modelHeadersMs": 1309,
+    "modelFirstChunkMs": 1310,
+    "modelArtifactSaveMs": 159,
+    "ineligibleClaims": 0,
+    "withheldClaims": 2,
+    "modelStreamMs": 4367,
+    "supportCheckMs": 1901,
+    "checkedClaims": 2,
+    "firstBlockMs": 20860,
+    "workerMs": 20975,
+    "totalMs": 21461
+  }
+}

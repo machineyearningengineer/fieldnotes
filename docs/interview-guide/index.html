@@ -1,0 +1,2164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#123e38" />
+    <title>Fieldnotes — interview pocket guide</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f3eb;
+        --paper: #fffdf8;
+        --ink: #202e2a;
+        --muted: #53645d;
+        --line: #d4dcd2;
+        --accent: #145e50;
+        --wash: #e5efe7;
+        --warn: #765024;
+        --warnbg: #f6ecdb;
+        --shadow: 0 6px 24px #163e3410;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          17px/1.65 system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+      button,
+      select {
+        font: inherit;
+      }
+      a {
+        color: var(--accent);
+        text-underline-offset: 3px;
+      }
+      button,
+      select,
+      summary,
+      a {
+        touch-action: manipulation;
+      }
+      button,
+      select {
+        min-height: 44px;
+      }
+      button {
+        color: var(--ink);
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        padding: 9px 15px;
+        cursor: pointer;
+      }
+      button[aria-pressed="true"],
+      button.primary {
+        background: var(--accent);
+        color: var(--paper);
+        border-color: var(--accent);
+      }
+      button:disabled {
+        opacity: 0.45;
+        cursor: default;
+      }
+      :focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 3px;
+      }
+      header {
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+      }
+      .top {
+        max-width: 780px;
+        margin: auto;
+        padding: 16px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .brand {
+        font-weight: 750;
+        letter-spacing: -0.04em;
+        font-size: 21px;
+      }
+      .brand span {
+        color: var(--accent);
+      }
+      .tiny {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+      }
+      .toolbar-inner {
+        max-width: 780px;
+        margin: auto;
+        padding: 10px 22px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .toolbar label {
+        font-size: 13px;
+        font-weight: 650;
+        white-space: nowrap;
+      }
+      .toolbar select {
+        min-width: 0;
+        width: 100%;
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 8px;
+        color: var(--ink);
+      }
+      main {
+        max-width: 736px;
+        margin: auto;
+        padding: 30px 22px 28px;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.15;
+        letter-spacing: -0.035em;
+      }
+      h1 {
+        font-family: Georgia, serif;
+        font-weight: 500;
+        font-size: clamp(36px, 8vw, 52px);
+        margin: 8px 0 18px;
+      }
+      h2 {
+        font-size: 25px;
+        margin: 35px 0 14px;
+      }
+      h3 {
+        font-size: 20px;
+        margin: 0 0 12px;
+      }
+      p {
+        margin: 0 0 16px;
+      }
+      .lead {
+        font-size: 19px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+      .kicker {
+        text-transform: uppercase;
+        font-weight: 750;
+        letter-spacing: 0.09em;
+        font-size: 12px;
+        color: var(--accent);
+      }
+      .answer {
+        border-left: 3px solid var(--accent);
+        padding: 15px 18px;
+        background: var(--wash);
+        border-radius: 0 10px 10px 0;
+        margin: 18px 0 24px;
+      }
+      .answer p:last-child,
+      .card p:last-child {
+        margin-bottom: 0;
+      }
+      .answer .label,
+      .label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 750;
+        display: block;
+        margin-bottom: 7px;
+        color: var(--accent);
+      }
+      .card {
+        padding: 20px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        margin: 14px 0;
+        box-shadow: var(--shadow);
+      }
+      .card p {
+        font-size: 16px;
+      }
+      .lens {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 12px;
+      }
+      .number {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--wash);
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 750;
+      }
+      .lens h3 {
+        margin: 2px 0 5px;
+      }
+      .lens p {
+        margin: 0;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      details {
+        border-top: 1px solid var(--line);
+        margin-top: 16px;
+        padding-top: 4px;
+      }
+      summary {
+        cursor: pointer;
+        min-height: 44px;
+        padding: 10px 0;
+        font-size: 15px;
+        font-weight: 650;
+        color: var(--accent);
+      }
+      details p,
+      details li {
+        font-size: 16px;
+      }
+      ul,
+      ol {
+        padding-left: 23px;
+        margin: 10px 0 18px;
+      }
+      li {
+        padding: 3px 0;
+      }
+      .note {
+        background: var(--warnbg);
+        border-left: 3px solid var(--warn);
+        padding: 16px 18px;
+        margin: 20px 0;
+        font-size: 16px;
+      }
+      .note strong {
+        color: var(--warn);
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .split .card {
+        margin: 0;
+      }
+      .flow {
+        margin: 23px 0;
+      }
+      .flow-step {
+        position: relative;
+        margin: 0 0 22px;
+        padding: 16px 18px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+      }
+      .flow-step:not(:last-child):after {
+        content: "↓";
+        position: absolute;
+        bottom: -25px;
+        left: calc(50% - 7px);
+        color: var(--accent);
+        font-weight: 700;
+        line-height: 22px;
+      }
+      .flow-step b {
+        display: block;
+      }
+      .flow-step span {
+        display: block;
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .flow-step small {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .switch {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .switch button {
+        flex: 1;
+      }
+      .story {
+        margin: 24px 0;
+        border-left: 2px solid var(--line);
+        padding-left: 20px;
+      }
+      .beat {
+        position: relative;
+        margin: 0 0 30px;
+      }
+      .beat:before {
+        content: "";
+        position: absolute;
+        left: -27px;
+        top: 7px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 3px solid var(--bg);
+      }
+      .beat h3 {
+        font-family: Georgia, serif;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .beat .user {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .beat .behind {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+      .beat .tag {
+        display: inline-block;
+        font-size: 12px;
+        color: var(--accent);
+        background: var(--wash);
+        border-radius: 5px;
+        padding: 2px 7px;
+        margin-bottom: 8px;
+      }
+      .term {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 14px;
+        padding: 17px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .term b {
+        color: var(--accent);
+      }
+      .term p {
+        margin: 0;
+        font-size: 16px;
+      }
+      .status {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 650;
+      }
+      .status span {
+        padding: 5px 10px;
+        background: var(--wash);
+        border-radius: 5px;
+      }
+      .pill {
+        font-size: 12px;
+        color: var(--accent);
+        font-weight: 700;
+      }
+      .question {
+        font-size: 22px;
+        line-height: 1.4;
+        font-family: Georgia, serif;
+      }
+      .qa {
+        border-bottom: 1px solid var(--line);
+        padding: 20px 0;
+      }
+      .qa h3 {
+        font-size: 19px;
+        line-height: 1.4;
+      }
+      .qa p {
+        font-size: 16px;
+      }
+      .footer-nav {
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+        margin: 35px 0 15px;
+      }
+      .footer-nav button {
+        flex: 1;
+      }
+      footer {
+        max-width: 736px;
+        margin: auto;
+        padding: 0 22px 35px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .jump-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .jump-grid a {
+        padding: 14px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        font-weight: 650;
+        font-size: 15px;
+        text-decoration: none;
+      }
+      .hidden,
+      [hidden] {
+        display: none !important;
+      }
+      .progress {
+        height: 3px;
+        background: var(--line);
+      }
+      .progress div {
+        height: 100%;
+        background: var(--accent);
+        transition: width 0.15s;
+      }
+      code {
+        font-size: 0.9em;
+        overflow-wrap: anywhere;
+      }
+      blockquote {
+        margin: 15px 0;
+        padding-left: 16px;
+        border-left: 2px solid var(--line);
+      }
+      .fact {
+        margin: 14px 0;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .fact h3 {
+        font-size: 18px;
+      }
+      .fact p {
+        font-size: 16px;
+        margin: 0;
+      }
+      .mini {
+        font-size: 15px;
+      }
+      .toolbar button {
+        padding: 5px 10px;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+      @media (max-width: 480px) {
+        .top {
+          padding: 12px 18px;
+        }
+        .toolbar-inner {
+          padding: 9px 18px;
+          gap: 9px;
+        }
+        main {
+          padding: 24px 18px;
+        }
+        .split {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          padding: 17px;
+        }
+        .term {
+          grid-template-columns: 78px 1fr;
+          gap: 10px;
+        }
+        .toolbar label {
+          display: none;
+        }
+        .top .tiny {
+          max-width: 100px;
+          text-align: right;
+          line-height: 1.4;
+        }
+        h2 {
+          font-size: 23px;
+        }
+        .jump-grid {
+          gap: 8px;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14221f;
+          --paper: #1b2c27;
+          --ink: #eff2e9;
+          --muted: #b2c3b9;
+          --line: #3b5147;
+          --accent: #9ed8be;
+          --wash: #253e33;
+          --warn: #e9c18d;
+          --warnbg: #382f24;
+          --shadow: none;
+        }
+        button[aria-pressed="true"],
+        button.primary {
+          color: #14221f;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+      @media print {
+        header,
+        .toolbar,
+        .footer-nav,
+        .switch,
+        footer {
+          display: none;
+        }
+        section[hidden] {
+          display: block !important;
+        }
+        body {
+          font-size: 12pt;
+          background: white;
+          color: black;
+        }
+        main {
+          max-width: none;
+        }
+        .card,
+        .flow-step {
+          break-inside: avoid;
+          box-shadow: none;
+        }
+        section {
+          break-before: page;
+        }
+        section:first-child {
+          break-before: auto;
+        }
+        details > * {
+          display: block !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div class="brand"><span>↟</span> Fieldnotes</div>
+        <div class="tiny">Interview pocket guide</div>
+      </div>
+    </header>
+    <div class="toolbar">
+      <div class="toolbar-inner">
+        <label for="chapter">Read</label
+        ><select id="chapter" aria-label="Choose a chapter">
+          <option value="quick">1 · At a glance</option>
+          <option value="execution">2 · Execution & recovery</option>
+          <option value="journey">3 · One request, start to finish</option>
+          <option value="evidence">4 · Evidence & presentation</option>
+          <option value="hosting">5 · VPS, Google & scaling</option>
+          <option value="gaps">6 · Gaps & improvements</option>
+          <option value="interview">7 · Interview answers</option></select
+        ><button id="topButton" aria-label="Scroll to top">↑ Top</button>
+      </div>
+      <div class="progress" aria-hidden="true"><div id="progress"></div></div>
+    </div>
+    <main>
+      <section id="quick">
+        <div class="kicker">The whole project</div>
+        <h1>Three jobs.<br />One research tool.</h1>
+        <p class="lead">Get the work done. Check the evidence. Show the result honestly.</p>
+        <div class="answer">
+          <span class="label">Your 30-second answer</span>
+          <p>
+            “Fieldnotes is a scientific research app with an asynchronous backend. It saves a
+            question and returns a task ID, then a queued worker retrieves sources through Valyu and
+            uses Gemini to produce claims tied to retained passages. Claims are checked before
+            publication, and the browser follows saved progress. I focused on durable execution,
+            bounded provider spending and inspectable evidence. The main remaining gaps are complete
+            per-task cost accounting and retrieval depth for harder questions.”
+          </p>
+        </div>
+        <a
+          class="card lens"
+          href="#execution"
+          style="display: grid; text-decoration: none; color: inherit"
+          ><span class="number">1</span>
+          <div>
+            <h3>Execution</h3>
+            <p>Accept once. Deliver work. Save progress. Recover safely.</p>
+          </div></a
+        >
+        <a
+          class="card lens"
+          href="#evidence"
+          style="display: grid; text-decoration: none; color: inherit"
+          ><span class="number">2</span>
+          <div>
+            <h3>Evidence</h3>
+            <p>Find sources. Propose claims. Check support and relevance.</p>
+          </div></a
+        >
+        <a
+          class="card lens"
+          href="#evidence"
+          style="display: grid; text-decoration: none; color: inherit"
+          ><span class="number">3</span>
+          <div>
+            <h3>Presentation</h3>
+            <p>Display saved truth: progress, citations, uncertainty and failures.</p>
+          </div></a
+        >
+        <h2>Three answers to know first</h2>
+        <div class="card">
+          <span class="label">1 · Explain one request</span>
+          <h3>“What happens when I press Research?”</h3>
+          <p>
+            The gateway checks access. The API saves the question, queues its task ID and returns
+            quickly. A worker claims the task, retrieves sources, generates and checks claims, then
+            saves the report. The browser follows saved progress and lets me inspect the citations.
+          </p>
+          <a href="#journey">Follow the full journey →</a>
+        </div>
+        <div class="card">
+          <span class="label">2 · Explain one crash</span>
+          <h3>“What if the worker stops?”</h3>
+          <p>
+            Its lease eventually expires. Another attempt can claim the task with a newer epoch and
+            reuse saved checkpoints. The old worker cannot write stale state if it wakes up. If a
+            paid call’s outcome is uncertain, its allowance stays reserved and the task may fail
+            visibly rather than repeat the call.
+          </p>
+          <a href="#execution">Understand leases and recovery →</a>
+        </div>
+        <div class="card">
+          <span class="label">3 · Explain the evidence distinction</span>
+          <h3>“Supported—but does it answer me?”</h3>
+          <p>
+            Support asks whether a passage justifies a sentence. Coverage asks whether that sentence
+            answers the question. A study saying a fabric is warm when dry can support that claim
+            without answering which coat is warmer in rain. Fieldnotes labels supported background
+            as related evidence when it cannot answer directly.
+          </p>
+          <a href="#evidence">Understand support and coverage →</a>
+        </div>
+        <h2>The six distinctions to remember</h2>
+        <div class="term">
+          <b>Queue / DB</b>
+          <p>The queue delivers the instruction. The database owns the task’s truth.</p>
+        </div>
+        <div class="term">
+          <b>Lease / epoch</b>
+          <p>
+            The lease says <em>until when</em> you may work. The epoch says
+            <em>which ownership generation</em> may write.
+          </p>
+        </div>
+        <div class="term">
+          <b>Epoch / revision</b>
+          <p>Epoch protects worker ownership. Revision orders snapshots for readers.</p>
+        </div>
+        <div class="term">
+          <b>Support / coverage</b>
+          <p>
+            Support: does this passage justify the sentence? Coverage: does the sentence answer the
+            question?
+          </p>
+        </div>
+        <div class="term">
+          <b>Status / outcome</b>
+          <p>
+            “Succeeded” means processing finished. “Answered / partial / unanswered” describes the
+            result’s usefulness.
+          </p>
+        </div>
+        <div class="term">
+          <b>Limit / bill</b>
+          <p>
+            Spending controls restrict new work. Accounting tells you what the work ultimately cost.
+          </p>
+        </div>
+        <h2>What is unfinished?</h2>
+        <p>
+          <strong>Requirement gap:</strong> full cost per task. Search is measured, AI is estimated,
+          shared hosting is not allocated.
+        </p>
+        <p>
+          <strong>Quality limitation:</strong> fixed searches sometimes find related papers without
+          answering the exact question.
+        </p>
+        <p class="mini muted">
+          The core workflow has recorded end-to-end evidence. These limitations don’t mean every
+          question is answerable or every requirement is complete.
+        </p>
+        <div class="jump-grid">
+          <a href="#execution">Understand reliability →</a
+          ><a href="#journey">Follow one request →</a><a href="#hosting">Start from the VPS →</a
+          ><a href="#interview">Practise answers →</a>
+        </div>
+      </section>
+      <section id="execution" hidden>
+        <div class="kicker">Execution</div>
+        <h1>One task.<br />Safe ownership.</h1>
+        <p class="lead">
+          The browser can disappear. A worker can restart. The saved task must still make sense.
+        </p>
+        <div class="answer">
+          <span class="label">At a glance</span>
+          <p>
+            <strong>Request key:</strong> don’t create twice.<br /><strong>Task ID:</strong> which
+            job?<br /><strong>Lease:</strong> who may work, until when?<br /><strong>Epoch:</strong>
+            is this still the current owner?<br /><strong>Checkpoint:</strong> what can we reuse?<br /><strong
+              >Revision:</strong
+            >
+            is this view newer?
+          </p>
+        </div>
+        <h2>The lifecycle</h2>
+        <div class="status">
+          <span>Queued</span> → <span>Running</span> → <span>Succeeded / failed</span>
+        </div>
+        <p class="mini" style="margin-top: 12px">
+          While running: searching → writing → checking. A completed report has a separate answer
+          outcome.
+        </p>
+        <div class="card">
+          <h3>1. Don’t create the same job twice</h3>
+          <p>
+            The browser submits an <strong>idempotency key</strong>: a label for this intended
+            submission. The database records it with the owner and request content.
+          </p>
+          <p>
+            Retrying the same key and input returns the original task. Reusing that key for
+            different input is a conflict. A new key can create a new task, even for the same
+            question.
+          </p>
+          <details>
+            <summary>Why this exists</summary>
+            <p>
+              A request can succeed on the server while its response is lost. Without a saved key, a
+              browser retry could buy the same research twice.
+            </p>
+          </details>
+        </div>
+        <div class="card">
+          <h3>2. Save before handing off</h3>
+          <p>
+            The API saves the task, then asks the queue to deliver it. These are separate
+            operations: there is a crash gap between them.
+          </p>
+          <p>
+            A scheduled reconciliation checks accepted work needing delivery and re-enqueues it. The
+            task record preserves the intent to do the work.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3. Claim temporary ownership</h3>
+          <p>
+            A database transaction lets a worker claim an available task. A transaction makes the
+            ownership decision atomic: competing claims cannot both win the same claim.
+          </p>
+          <p>
+            The <strong>lease</strong> lasts 60 seconds and is renewed every 15 seconds. If the
+            worker stops renewing it, the task becomes available to another attempt.
+          </p>
+        </div>
+        <div class="card">
+          <h3>4. Stop the old owner writing</h3>
+          <p>
+            Every successful claim increments the <strong>epoch</strong>, an ownership counter.
+            Every task-state write must carry the current epoch and a valid lease.
+          </p>
+          <div class="flow">
+            <div class="flow-step">
+              <b>A claims epoch 1</b><span>A works, then freezes. Its lease expires.</span>
+            </div>
+            <div class="flow-step">
+              <b>B claims epoch 2</b><span>B is now the valid owner.</span>
+            </div>
+            <div class="flow-step">
+              <b>A wakes up with epoch 1</b><span>Its stale task-state write is rejected.</span>
+            </div>
+          </div>
+          <p>
+            <strong>Lease = expiry time. Epoch = ownership generation.</strong> They work together;
+            they are not interchangeable.
+          </p>
+          <details>
+            <summary>Does that stop a paid call already in flight?</summary>
+            <p>
+              No. Fencing protects authoritative writes. It cannot undo an external request already
+              sent to Valyu or Gemini. That uncertainty is why the accounting ledger keeps
+              reservations when charges are unknown.
+            </p>
+          </details>
+        </div>
+        <div class="card">
+          <h3>5. Resume saved work</h3>
+          <p>
+            A <strong>checkpoint</strong> is durable output a later attempt can reuse: completed
+            searches, a completed generated draft, check results and published block identifiers.
+          </p>
+          <p>
+            Published block keys stop replay from appending the same block twice. A partially
+            streamed generation may fail with its draft retained rather than buy another generation.
+          </p>
+          <details>
+            <summary>Checkpoint is not a promise to recover everything</summary>
+            <p>
+              A crash can happen after a provider performs work but before its result is saved. The
+              system cannot always know whether it was charged. Recovery stays bounded and may end
+              in a visible failure.
+            </p>
+          </details>
+        </div>
+        <div class="card">
+          <h3>6. Keep the reader moving forwards</h3>
+          <p>
+            A <strong>revision</strong> is the version number of the saved snapshot. The browser
+            ignores older updates, so a delayed poll cannot replace a newer streamed result.
+          </p>
+          <p>
+            Report blocks build progressively. This is not a general document-edit history or a
+            separate “rendition” system. The task snapshot revision orders the visible state.
+          </p>
+        </div>
+        <h2>What if something goes wrong?</h2>
+        <p>Start with what the user sees, then explain the protection underneath.</p>
+        <div class="fact">
+          <h3>“I click twice or retry.”</h3>
+          <p>
+            The same idempotency key and input return the original task. A new key is a new
+            submission.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>“I close the browser.”</h3>
+          <p>
+            The queued research continues. Reopening restores saved state while the session still
+            grants access.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>“The API saves, then crashes before enqueueing.”</h3>
+          <p>Scheduled reconciliation finds accepted work needing delivery and re-enqueues it.</p>
+        </div>
+        <div class="fact">
+          <h3>“A worker stops.”</h3>
+          <p>
+            Another attempt can claim after lease expiry and reuse saved checkpoints. Some
+            interrupted or uncertain work fails visibly instead of being repeated.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>“My progress connection drops.”</h3>
+          <p>
+            The browser reconnects or polls for the same saved snapshot. Revision checks keep older
+            updates from replacing newer ones.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>“The papers don’t answer my question.”</h3>
+          <p>The app labels the gap. Related findings are not presented as a confident answer.</p>
+        </div>
+        <div class="fact">
+          <h3>“No acceptable claims survive.”</h3>
+          <p>
+            The task visibly fails, retaining available sources and draft progress. Processing
+            failures are also shown explicitly.
+          </p>
+        </div>
+        <h2>Recover, reject or fail?</h2>
+        <div class="fact">
+          <h3>Invalid input → reject</h3>
+          <p>Bad input is rejected before accepting a new task.</p>
+        </div>
+        <div class="fact">
+          <h3>Lost delivery → reconcile</h3>
+          <p>Accepted work needing delivery is re-enqueued.</p>
+        </div>
+        <div class="fact">
+          <h3>Duplicate delivery → check ownership</h3>
+          <p>
+            An active lease or completed task prevents another worker from doing the same published
+            work.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>Confirmed-free retryable rejection → redeliver</h3>
+          <p>Queue backoff owns retries. Saved completed work can be reused.</p>
+        </div>
+        <div class="fact">
+          <h3>Uncertain cost, deadline or invalid report → fail visibly</h3>
+          <p>Keep sources and available draft progress. Unknown charges stay reserved.</p>
+        </div>
+        <div class="fact">
+          <h3>Unsupported claim → withhold</h3>
+          <p>
+            A bad candidate claim need not invalidate every good claim. Fatal structure or identity
+            errors can still fail the task.
+          </p>
+        </div>
+        <div class="answer">
+          <span class="label">Say this</span>
+          <p>
+            “Delivery can happen more than once. I use idempotent acceptance, transactional
+            ownership, fenced writes and checkpoints to avoid duplicate or stale publication. I
+            don’t claim exactly-once execution of paid external calls.”
+          </p>
+        </div>
+      </section>
+      <section id="journey" hidden>
+        <div class="kicker">One request, in order</div>
+        <h1>From question<br />to checked answer.</h1>
+        <p class="lead">
+          “I want to know whether sodium-ion lasts longer than LFP in grid storage—and see what
+          backs up the answer.”
+        </p>
+        <div class="story">
+          <article class="beat">
+            <span class="tag">Browser → Vercel</span>
+            <h3>I ask my question.</h3>
+            <p class="user">I choose Compare, name the alternatives and press Research.</p>
+            <p class="behind">
+              <strong>Behind it:</strong> the browser sends the question and an idempotency key.
+              Vercel checks my session and forwards the request using its Google identity.
+            </p>
+            <details>
+              <summary>What is the gateway?</summary>
+              <p>
+                Server code on Vercel between the browser and the private Google API. It is called a
+                backend-for-frontend, or BFF. It verifies access; it does not perform the research.
+              </p>
+            </details>
+          </article>
+          <article class="beat">
+            <span class="tag">API → database → queue</span>
+            <h3>My task appears.</h3>
+            <p class="user">I see “queued” rather than waiting for the whole answer.</p>
+            <p class="behind">
+              <strong>Behind it:</strong> the API validates the input and admission limits, saves
+              the task in Firestore, asks Cloud Tasks to deliver its ID, and returns that ID.
+            </p>
+            <details>
+              <summary>What if it crashes between saving and enqueueing?</summary>
+              <p>
+                The saved task survives. Scheduled reconciliation recovers accepted work needing
+                delivery. The user does not have to keep the browser open.
+              </p>
+            </details>
+          </article>
+          <article class="beat">
+            <span class="tag">Queue → worker</span>
+            <h3>The research starts.</h3>
+            <p class="user">The state changes to searching.</p>
+            <p class="behind">
+              <strong>Behind it:</strong> Cloud Tasks makes an HTTP request to the worker. The
+              worker claims the task with a lease and epoch before doing work.
+            </p>
+            <details>
+              <summary>Is a worker watching the queue all day?</summary>
+              <p>
+                Not in this production setup. The queue pushes an HTTP delivery to the worker. Local
+                synthetic mode uses a different local dispatcher.
+              </p>
+            </details>
+          </article>
+          <article class="beat">
+            <span class="tag">Worker → Valyu</span>
+            <h3>I see what it searched.</h3>
+            <p class="user">The search trail and sources arrive.</p>
+            <p class="behind">
+              <strong>Behind it:</strong> Compare runs an academic query for each alternative and a
+              broader comparison query. Discover uses one broad query and one academic query for
+              limitations. Searches run concurrently.
+            </p>
+            <p class="behind">
+              Each search requests up to three results; the merged set is capped at eight. Text,
+              metadata, query provenance and usage are saved.
+            </p>
+          </article>
+          <article class="beat">
+            <span class="tag">Source text → labelled passages</span>
+            <h3>The evidence is prepared.</h3>
+            <p class="user">There is nothing I need to do.</p>
+            <p class="behind">
+              <strong>Behind it:</strong> code retains bounded, question-focused excerpts and
+              divides them into labelled passages. Scientific Compare findings must use eligible
+              research records. Ordinary web results can remain visible as sources.
+            </p>
+            <details>
+              <summary>Why not send every full document?</summary>
+              <p>
+                Bounded excerpts control input size, storage and cost. The trade-off is missing
+                context. Source eligibility is also not proof of scientific quality or peer review.
+              </p>
+            </details>
+          </article>
+          <article class="beat">
+            <span class="tag">Worker → Gemini</span>
+            <h3>An answer is drafted.</h3>
+            <p class="user">The system is working out what it can say.</p>
+            <p class="behind">
+              <strong>Behind it:</strong> Gemini proposes a short plan of the question’s parts, then
+              factual claims pointing to source and passage IDs. Code owns the quoted text and
+              citation links.
+            </p>
+          </article>
+          <article class="beat">
+            <span class="tag">Validation → support → coverage</span>
+            <h3>Checked blocks appear.</h3>
+            <p class="user">I can begin reading a visibly provisional report.</p>
+            <p class="behind">
+              <strong>Behind it:</strong> code checks identifiers and numerical anchors. A separate
+              model request assesses whether the passage supports each whole claim and which
+              question parts it answers. Acceptable blocks are saved and sent to the reader.
+            </p>
+            <p class="behind">
+              Generation and checking can overlap. The site publishes saved checked blocks, not a
+              pretend typing animation.
+            </p>
+          </article>
+          <article class="beat">
+            <span class="tag">Final checks → saved outcome</span>
+            <h3>I get an honest result.</h3>
+            <p class="user">
+              It says answered, partly answered, not directly answered—or visibly failed.
+            </p>
+            <p class="behind">
+              <strong>Behind it:</strong> final validation checks the assembled report. The backend
+              saves the report, outcome and usage. A processing success can still have an unanswered
+              outcome.
+            </p>
+          </article>
+          <article class="beat">
+            <span class="tag">Saved evidence → reader</span>
+            <h3>I check a citation.</h3>
+            <p class="user">I open the supporting passage and original source.</p>
+            <p class="behind">
+              <strong>Behind it:</strong> the source card uses the task’s saved evidence. Closing
+              and reopening the page restores saved state while my session still grants access.
+            </p>
+          </article>
+        </div>
+        <div class="answer">
+          <span class="label">The thread through it all</span>
+          <p>
+            The database saves the truth. The queue delivers work. The worker makes progress. The
+            browser shows the saved result.
+          </p>
+        </div>
+      </section>
+      <section id="evidence" hidden>
+        <div class="kicker">Evidence & presentation</div>
+        <h1>True to the passage.<br />Useful to the question.</h1>
+        <p class="lead">Those are separate checks. A factual sentence can still be irrelevant.</p>
+        <div class="card">
+          <span class="label">An everyday example</span>
+          <h3>“Which coat keeps me warmer in the rain?”</h3>
+          <p>A source says: “This fabric is warm when dry.”</p>
+          <p>
+            <strong>Support:</strong> the source supports the statement about dry fabric.<br /><strong
+              >Coverage:</strong
+            >
+            it does not answer the wet-weather comparison.
+          </p>
+          <p class="muted">Illustrative analogy, not a Fieldnotes research result.</p>
+        </div>
+        <div class="split">
+          <div class="card">
+            <h3>Support</h3>
+            <p>“Does this exact passage justify every part of this sentence?”</p>
+            <p>Check the entities, numbers, conditions, comparisons and scope.</p>
+          </div>
+          <div class="card">
+            <h3>Coverage</h3>
+            <p>“Does this supported sentence answer a requested part of the question?”</p>
+            <p>Related background is not a direct answer.</p>
+          </div>
+        </div>
+        <h2>What the model is allowed to write</h2>
+        <p>
+          A claim is one proposed factual statement. A passage is a labelled piece of retained
+          source text.
+        </p>
+        <div class="answer">
+          <p>
+            <strong>Claim:</strong> a narrowly scoped finding.<br /><strong>Source ID:</strong>
+            which source?<br /><strong>Passage ID:</strong> which piece of that source?
+          </p>
+        </div>
+        <p>
+          Code looks up the selected passage and builds the citation from the saved source URL. The
+          model does not get to invent the quoted text or citation destination.
+        </p>
+        <h2>The checks, in order</h2>
+        <div class="flow">
+          <div class="flow-step">
+            <small>IDENTITY</small><b>Do the source and passage exist?</b
+            ><span>Check that the passage belongs to the selected source.</span>
+          </div>
+          <div class="flow-step">
+            <small>NUMERICAL GUARD</small><b>Are the claim’s numbers in that passage?</b
+            ><span
+              >A cheap rejection rule. It does not prove the units or interpretation are
+              right.</span
+            >
+          </div>
+          <div class="flow-step">
+            <small>SUPPORT</small><b>Does the passage support the whole sentence?</b
+            ><span
+              >Supported claims may continue. Partial, contradicted or insufficient claims are
+              withheld.</span
+            >
+          </div>
+          <div class="flow-step">
+            <small>COVERAGE</small><b>Which requested parts does it answer?</b
+            ><span
+              >A supported laboratory finding may not answer a real-world grid comparison.</span
+            >
+          </div>
+        </div>
+        <h2>How does it know what needs answering?</h2>
+        <p>
+          Gemini proposes a small coverage plan: up to five aspects of this question. The code calls
+          these <strong>facets</strong>.
+        </p>
+        <div class="card">
+          <h3>For a battery comparison</h3>
+          <p>
+            Facet 1: compare cycle life in the requested setting.<br />Facet 2: compare
+            low-temperature performance.
+          </p>
+          <p>
+            The checker returns the facet IDs each claim actually answers. Code uses the accumulated
+            coverage to choose an outcome.
+          </p>
+        </div>
+        <p>
+          The plan and checker are model judgements. They can miss something or agree on the same
+          mistake. They do not certify completeness or scientific truth.
+        </p>
+        <h2>Why “succeeded” can mean “unanswered”</h2>
+        <div class="fact">
+          <h3>Answered</h3>
+          <p>
+            Accepted claims cover the required parts of the model-generated question plan. This is
+            not proof the literature is complete.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>Partial</h3>
+          <p>Accepted answering claims leave required parts unresolved.</p>
+        </div>
+        <div class="fact">
+          <h3>Unanswered</h3>
+          <p>
+            Supported related claims survive, but none directly answers the question. They appear as
+            related evidence with an explicit warning.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>Failed</h3>
+          <p>
+            No acceptable claims survive, or the workflow cannot finish safely. Sources and any
+            saved draft remain available.
+          </p>
+        </div>
+        <h2>Traceability: follow a claim back</h2>
+        <p>
+          <strong>Traceability</strong> means being able to follow a report statement to the
+          particular passage and source behind it.
+        </p>
+        <div class="flow">
+          <div class="flow-step">
+            <b>A sentence in the report</b><span>What is being claimed?</span>
+          </div>
+          <div class="flow-step">
+            <b>Its citation and source card</b
+            ><span>Which source, author/date and retained passage?</span>
+          </div>
+          <div class="flow-step">
+            <b>The original source</b
+            ><span>Open the publication to inspect context beyond the retained excerpt.</span>
+          </div>
+        </div>
+        <p>
+          The search trail separately shows how the source was found. Traceability makes a claim
+          inspectable; it does not prove the source or the model’s interpretation is correct.
+        </p>
+        <h2>What the reader receives</h2>
+        <p>
+          <strong>SSE</strong> means Server-Sent Events: a one-way stream of saved snapshots. The
+          browser displays checked blocks as they are saved. Polling is the fallback when streams
+          stall or disconnect.
+        </p>
+        <p>
+          Both transports use the same snapshot and forward-only revisions. The outline, citations
+          and source panels should agree because they reflect that shared server state.
+        </p>
+        <p>
+          <strong>Source cards</strong> show metadata and evidence. The
+          <strong>search trail</strong> shows the queries, so the user can judge a retrieval gap
+          rather than assume no research exists.
+        </p>
+        <div class="note">
+          <strong>Don’t overclaim:</strong> a valid URL is not evidence of support. A supported
+          statement is not necessarily relevant. An eligible paper is not necessarily correct or
+          peer reviewed.
+        </div>
+      </section>
+      <section id="hosting" hidden>
+        <div class="kicker">Architecture & scale</div>
+        <h1>Same work.<br />Different hosting.</h1>
+        <p class="lead">Start with the VPS you know. Then swap in the managed Google services.</p>
+        <div class="note">
+          <strong>Required:</strong> Google Cloud backend and Vercel frontend.<br /><strong
+            >Chosen:</strong
+          >
+          Cloud Run, Cloud Tasks and Firestore. A Google VM with Postgres was also an option; the
+          brief did not require serverless.
+        </div>
+        <p>
+          A <strong>VPS is a rented virtual server</strong>. Serverless still runs on servers; the
+          provider manages their allocation. You still own application correctness.
+        </p>
+        <div class="switch" aria-label="Architecture model">
+          <button id="vpsBtn" aria-pressed="true">VPS version</button
+          ><button id="gcpBtn" aria-pressed="false">Current Google version</button>
+        </div>
+        <div id="architecture" aria-live="polite"></div>
+        <p class="mini muted">
+          Read down the main request path. The API and worker both read/write the database; the
+          database is not another queue step. Progress returns from saved state through the API and
+          gateway to the browser.
+        </p>
+        <details>
+          <summary>How to draw this in an interview</summary>
+          <p>
+            Draw Browser → Vercel gateway → API across the top. Put Database beneath the API. Then
+            API → Queue → Worker. Connect the worker to Database, Valyu and Gemini. Add a return
+            arrow from API to Browser labelled “saved snapshots”. Add Scheduler → API labelled
+            “recover undelivered work”.
+          </p>
+          <p>That captures ownership and data flow without drawing every request.</p>
+        </details>
+        <h2>Why these services?</h2>
+        <p>
+          Use managed delivery and storage, then spend the project’s effort on reliable research and
+          inspectable evidence. These are defensible choices, not the only possible stack.
+        </p>
+        <div class="fact">
+          <h3><strong>Next.js on Vercel</strong></h3>
+          <p>Hosts the interface and server-side gateway.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Vercel was required. Next.js lets the UI and its session gateway
+              live together.
+            </p>
+            <p>
+              <strong>Trade-off:</strong> Some deployment-specific behaviour; another frontend
+              framework could work.
+            </p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Vercel gateway / BFF</strong></h3>
+          <p>Checks the browser session and calls the private Google API.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Keeps privileged Google access on the server and gives the
+              browser one application origin to use.
+            </p>
+            <p><strong>Trade-off:</strong> Adds another network hop and proxy layer.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Federated Google identity</strong></h3>
+          <p>Lets Vercel authenticate to Google.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Avoids storing a long-lived Google service-account key in
+              Vercel.
+            </p>
+            <p><strong>Trade-off:</strong> More involved initial identity configuration.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Cloud Run API</strong></h3>
+          <p>Accepts questions, returns task IDs and serves progress.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Runs a normal container without managing a VM. Fits short HTTP
+              requests and low, bursty traffic.
+            </p>
+            <p>
+              <strong>Trade-off:</strong> Cold starts and platform limits; not inherently better for
+              steady workloads.
+            </p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Separate Cloud Run worker</strong></h3>
+          <p>Performs the slow research.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Research continues independently of the submission request.
+              Worker permissions and capacity can differ from the API’s.
+            </p>
+            <p><strong>Trade-off:</strong> Two services to deploy and observe.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Cloud Tasks</strong></h3>
+          <p>Delivers task IDs to the worker over HTTP.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Gives managed delivery, backoff and concurrency control. The
+              worker doesn’t need an always-running queue listener.
+            </p>
+            <p>
+              <strong>Trade-off:</strong> Delivery can repeat, so application-level deduplication
+              and ownership checks remain necessary.
+            </p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Firestore</strong></h3>
+          <p>Saves task state, ownership, checkpoints and reports.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> A task is naturally a document; transactions support safe
+              acceptance and worker claims. No database server to operate.
+            </p>
+            <p>
+              <strong>Trade-off:</strong> Document-size limits, read/write charges and contention on
+              frequently updated records. Less suited to relational queries.
+            </p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Cloud Scheduler</strong></h3>
+          <p>Periodically triggers reconciliation.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Repairs the gap where the task was saved but never successfully
+              queued.
+            </p>
+            <p><strong>Trade-off:</strong> Recovery can wait for the next scheduled run.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Secret Manager</strong></h3>
+          <p>Supplies the Valyu key to the worker.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Centralises secret access and keeps the key out of browser code
+              and Git.
+            </p>
+            <p><strong>Trade-off:</strong> Requires permissions and secret lifecycle management.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Valyu Search + official SDK</strong></h3>
+          <p>Retrieves source text and metadata.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Required by the brief. Provides material the app can cite and
+              inspect, rather than just links.
+            </p>
+            <p>
+              <strong>Trade-off:</strong> External latency, cost and retrieval coverage constrain
+              answer quality.
+            </p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Gemini through Vertex AI</strong></h3>
+          <p>Generates structured claims and checks their evidence.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Keeps model access within Google identity and infrastructure.
+              The selected Flash model fits a bounded, latency-conscious workflow.
+            </p>
+            <p>
+              <strong>Trade-off:</strong> Model judgement can be wrong; provider latency and quotas
+              remain external dependencies.
+            </p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Cloud Trace</strong></h3>
+          <p>Records timings across research steps and calls.</p>
+          <details>
+            <summary>Why it fits and the trade-off</summary>
+            <p>
+              <strong>Why:</strong> Helps distinguish queue delay, search latency, generation
+              latency and checking time.
+            </p>
+            <p>
+              <strong>Trade-off:</strong> Instrumentation and operational overhead; tracing alone
+              doesn’t establish answer quality.
+            </p>
+          </details>
+        </div>
+        <h2>Why these application choices?</h2>
+        <p>
+          The cloud products deliver and store work. These code-level rules make its behaviour
+          reliable and inspectable.
+        </p>
+        <div class="fact">
+          <h3><strong>TypeScript</strong></h3>
+          <p>
+            Shared types across frontend, backend and provider integrations make boundary changes
+            easier to follow.
+          </p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>Types disappear at runtime; external JSON still needs validation.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Shared contracts and OpenAPI</strong></h3>
+          <p>Keep requests, snapshots and errors consistent and make the API inspectable.</p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>Contracts must evolve carefully; generated types don’t replace runtime checks.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Provider adapters</strong></h3>
+          <p>
+            Separate research rules from Valyu, Gemini and Firestore details. This also enables
+            synthetic local providers.
+          </p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>Extra abstraction; keep it small rather than building a general framework.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Effect at service boundaries</strong></h3>
+          <p>Makes success and typed failure handling explicit in those boundaries.</p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>
+              It adds a concept to learn. Most worker orchestration still uses ordinary async code;
+              Effect isn’t what makes processing durable.
+            </p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>SSE with polling fallback</strong></h3>
+          <p>
+            Progress is one-way, from server to browser. SSE delivers saved updates promptly;
+            polling handles disconnected or stalled streams.
+          </p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>Connections and database reads become their own scaling concern.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Saved snapshots with revisions</strong></h3>
+          <p>
+            Refresh and reconnect restore one coherent backend state. Revisions prevent older
+            responses replacing newer ones.
+          </p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>Sending complete snapshots can become expensive as reports grow.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Leases and epochs</strong></h3>
+          <p>
+            Leases allow recovery after an owner disappears; epochs reject writes from a superseded
+            worker.
+          </p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>They protect task state, not external calls already sent.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Checkpoints and publication keys</strong></h3>
+          <p>Reuse finished work and avoid publishing the same block again during replay.</p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>A crash before a result is saved can still leave uncertainty.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>One cost ledger</strong></h3>
+          <p>
+            Every provider request reserves allowance and records its receipt through the same
+            rules.
+          </p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>
+              Budget control is stronger than the current final-bill accounting, which remains
+              incomplete.
+            </p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Claim-to-passage grounding</strong></h3>
+          <p>
+            Makes each factual claim inspectable and checks more than whether a citation URL exists.
+          </p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>Adds checking latency and cost; model checks do not prove scientific truth.</p>
+          </details>
+        </div>
+        <div class="fact">
+          <h3><strong>Synthetic local providers + Firestore emulator</strong></h3>
+          <p>
+            Exercise the real application flow without paid research calls or production
+            credentials.
+          </p>
+          <details>
+            <summary>What to acknowledge</summary>
+            <p>They cannot establish real provider quality, latency or outage behaviour.</p>
+          </details>
+        </div>
+        <div class="answer">
+          <span class="label">Why this design?</span>
+          <p>
+            “The brief required Google Cloud, and this is a small, bursty, asynchronous workload.
+            Cloud Run, Cloud Tasks and Firestore reduce the infrastructure I need to operate. On a
+            VPS I could run the same API and worker, perhaps with Postgres for state and jobs, but
+            I’d own more of the process supervision, capacity and recovery setup. The reliability
+            rules would still be necessary.”
+          </p>
+        </div>
+        <details>
+          <summary>Could Receipts use this?</summary>
+          <p>
+            It could use managed containers and push-based job delivery while keeping Postgres.
+            Moving to Cloud Run does not require moving to Firestore. Relational queries and
+            constraints are a reason to retain Postgres.
+          </p>
+          <p>
+            <code>SKIP LOCKED</code> helps competing workers claim different database rows. If the
+            claim transaction ends before a long external call, durable ownership and recovery still
+            need a design. It is not automatically the same guarantee as epoch fencing.
+          </p>
+        </details>
+        <h2>Read-heavy or write-heavy?</h2>
+        <div class="card">
+          <h3>Executing research: many meaningful writes</h3>
+          <p>
+            Acceptance, claim, lease renewal, search results, reservations, receipts, draft/check
+            checkpoints, report blocks and completion.
+          </p>
+          <p>
+            <strong>Focus now:</strong> provider waiting time, useful-answer quality and bounded
+            spending. There is no measured production read/write ratio to quote.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Viewing research: read-heavy</h3>
+          <p>
+            Loads, subscriptions, updates, reconnects and polling. Many people watching can create
+            more read/connection pressure than the worker count suggests.
+          </p>
+          <p>
+            <strong>Focus as usage grows:</strong> reads per viewer, active connections, payload
+            size, and caching completed authorised reports.
+          </p>
+        </div>
+        <div class="note">
+          <strong>Subtle point:</strong> conditional GET may save response bytes while still
+          requiring a database read to discover the current revision.
+        </div>
+        <h2>What gets slow first?</h2>
+        <p>
+          A <strong>bottleneck</strong> limits throughput. <strong>Contention</strong> means
+          operations compete over the same resource.
+        </p>
+        <div class="card">
+          <h3>1. Worker slot and provider latency</h3>
+          <p><strong>Pressure:</strong> one slow call occupies the only delivery slot.</p>
+          <p>
+            <strong>Measure:</strong> queue age, task duration, provider latency and rate-limit
+            responses.
+          </p>
+          <p>
+            <strong>Expand:</strong> raise queue concurrency and worker capacity together, within
+            quotas and spending limits.
+          </p>
+        </div>
+        <div class="card">
+          <h3>2. Shared admission and budget records</h3>
+          <p><strong>Pressure:</strong> transactions compete to update the same global records.</p>
+          <p><strong>Measure:</strong> transaction retries and latency.</p>
+          <p>
+            <strong>Expand:</strong> allocate bounded budgets/capacity across tenants or partitions
+            without letting the allocations exceed the total.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3. Progress writes and growing artifacts</h3>
+          <p>
+            <strong>Pressure:</strong> repeated task writes and large snapshots increase database
+            and transfer work.
+          </p>
+          <p><strong>Measure:</strong> writes per task, payload sizes and contention.</p>
+          <p>
+            <strong>Expand:</strong> reduce redundant updates; keep important checkpoints; move
+            large immutable artifacts to object storage.
+          </p>
+        </div>
+        <div class="card">
+          <h3>4. Viewers and reconnects</h3>
+          <p>
+            <strong>Pressure:</strong> streams and polling grow independently from research
+            execution.
+          </p>
+          <p><strong>Measure:</strong> connections, reads per viewer and reconnect bursts.</p>
+          <p>
+            <strong>Expand:</strong> share update distribution and cache authorised immutable
+            results by owner, task and revision.
+          </p>
+        </div>
+        <div class="answer">
+          <span class="label">Sizing example, not a benchmark</span>
+          <p>
+            10 arriving tasks per minute × 30 seconds each ≈
+            <strong>5 running tasks on average</strong>. Allow headroom for variance. More workers
+            help only if providers, database and budget can support them.
+          </p>
+        </div>
+        <p class="mini muted">
+          Synthetic load testing and a measured production capacity limit remain unestablished.
+          Leases protect ownership; they are not backups or disaster recovery.
+        </p>
+      </section>
+      <section id="gaps" hidden>
+        <div class="kicker">What works & what remains</div>
+        <h1>A working flow.<br />Two honest limits.</h1>
+        <p class="lead">
+          The biggest unfinished requirement is full job cost. The biggest quality weakness is
+          retrieving evidence that answers the exact question.
+        </p>
+        <h2>1. “What did that job really cost?”</h2>
+        <p>
+          Imagine ordering food: you know the food price, but haven’t added delivery and service
+          charges.
+        </p>
+        <div class="card">
+          <h3>What is recorded today</h3>
+          <p>
+            <strong>Search:</strong> measured Valyu deductions.<br /><strong>Model:</strong>
+            estimates from reported tokens and configured rates.<br /><strong>Hosting:</strong>
+            shared charges, not allocated to individual tasks.
+          </p>
+          <p>That is partial provider accounting, not the complete cost of delivering each job.</p>
+        </div>
+        <p>
+          Some billing evidence arrives later. Infrastructure serves several tasks and viewers, so
+          it needs a clear allocation rule rather than pretending every charge belongs to one task.
+        </p>
+        <div class="answer">
+          <span class="label">Say this</span>
+          <p>
+            “I record search charges and estimate model usage per task. Full cost accounting is
+            unfinished because I haven’t reconciled estimates against billing or allocated shared
+            infrastructure costs. The next step is billing reconciliation.”
+          </p>
+        </div>
+        <details>
+          <summary>What would completing it involve?</summary>
+          <p>
+            Read the billing export, associate attributable charges with task references, reconcile
+            model estimates, and allocate shared costs using declared measures such as runtime,
+            writes and deliveries. Report unallocated costs explicitly. The README documents this
+            direction; implementation and attribution need verification.
+          </p>
+        </details>
+        <h2>Spending control is already separate</h2>
+        <p>
+          The ledger reserves allowance before each provider call, then settles from its receipt.
+          Unknown charges keep their reservation.
+        </p>
+        <div class="card">
+          <h3>Current research envelope</h3>
+          <p>
+            USD0.10 provider allowance per task.<br />At most 12 provider operations.<br />At most 3
+            searches and 8 retained sources.<br />Five-minute task deadline.<br />One concurrent
+            queue delivery, with bounded attempts.
+          </p>
+          <p class="muted">
+            These are configured controls, not a claim that all infrastructure costs are
+            hard-capped. A provider overrun can stop further work but cannot undo an incurred
+            charge.
+          </p>
+        </div>
+        <h2>2. “Did those papers answer me?”</h2>
+        <p>
+          A paper about warm fabric in dry weather may be accurate, but it doesn’t answer which coat
+          is warmer in rain.
+        </p>
+        <p>
+          Fieldnotes sometimes retrieves evidence with that kind of mismatch. It uses a small, fixed
+          set of searches and does not automatically search again for missing parts.
+        </p>
+        <div class="answer">
+          <span class="label">Say this</span>
+          <p>
+            “Bounded searches can return related evidence without a direct answer. I label that
+            honestly. I’d improve and evaluate retrieval first, then consider a targeted follow-up
+            search for missing parts.”
+          </p>
+        </div>
+        <p>
+          The current saved Compare example reports related sodium-ion research but does not
+          establish the requested grid-storage comparison. Honest abstention is valuable; it still
+          leaves the user without the answer they wanted.
+        </p>
+        <details>
+          <summary>Why was follow-up search left out?</summary>
+          <p>
+            The brief allowed at most one implemented research-orchestration technique. The chosen
+            technique was claim-to-passage grounding. Adaptive follow-up would also need a defined
+            budget and another synthesis pass within or beyond the current operation limits.
+          </p>
+          <p>
+            This explains the scope choice. It does not excuse the separate cost-accounting
+            requirement gap.
+          </p>
+        </details>
+        <h2>Three next priorities</h2>
+        <div class="fact">
+          <h3>1. Complete accounting</h3>
+          <p>
+            Reconcile bills, attribute direct charges, allocate shared costs and expose the
+            remainder.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>2. Improve answer usefulness</h3>
+          <p>
+            Evaluate query changes, source selection and targeted follow-up against useful-answer
+            rate, evidence quality, latency and cost.
+          </p>
+        </div>
+        <div class="fact">
+          <h3>3. Strengthen evidence and operations</h3>
+          <p>
+            Broaden quality evaluation, exercise viewers/reconnects with synthetic providers, and
+            define retention, deletion and recovery.
+          </p>
+        </div>
+        <h2>Already improved</h2>
+        <p>
+          Saved step progress, one cost ledger, queue-owned retries, explicit outcomes, trace spans,
+          an offline claim-check gate, broader scholarly retrieval and stricter evidence eligibility
+          are already recorded as landed.
+        </p>
+        <p>
+          The offline set contains ten reviewed claim/passage cases. They passed the recorded run; a
+          deliberately lax checker failed two. Coding-agent-selected cases are useful regression
+          evidence, not an independent scientific benchmark.
+        </p>
+        <div class="note">
+          <strong>Other limits worth knowing:</strong> anonymous demo sessions lack account recovery
+          and automatic report deletion. Discover’s explanation/evidence intent is model-selected,
+          which affects source eligibility. The scaled system is described, not load-proven.
+        </div>
+        <div class="answer">
+          <span class="label">The concise closing answer</span>
+          <p>
+            “The system works end to end. I focused on durable processing, bounded spending and
+            checkable evidence. The main unfinished requirement is complete per-task cost
+            accounting. The main quality improvement is retrieving evidence that answers difficult
+            questions more directly.”
+          </p>
+        </div>
+      </section>
+      <section id="interview" hidden>
+        <div class="kicker">Interview practice</div>
+        <h1>Answer first.<br />Explain one layer deeper.</h1>
+        <p class="lead">
+          These are likely questions based on the brief, not a confirmed interview script.
+        </p>
+        <div class="card">
+          <span class="label" id="drillCount"></span>
+          <p class="question" id="drillQuestion"></p>
+          <button class="primary" id="reveal">Reveal answer</button>
+          <div id="drillAnswer" hidden></div>
+          <div class="footer-nav" style="margin-bottom: 0">
+            <button id="previousQuestion">← Previous</button
+            ><button id="nextQuestion">Next →</button>
+          </div>
+        </div>
+        <h2>All short answers</h2>
+        <div id="questions"></div>
+        <h2>Two real stories to use</h2>
+        <div class="card">
+          <h3>A real citation can still be wrong</h3>
+          <p>
+            A previous paragraph combined claims that its source did not fully support. URL checking
+            accepted the citation; passage-level checking withheld the overreach.
+          </p>
+          <p><strong>Lesson:</strong> citation identity and claim support are different checks.</p>
+        </div>
+        <div class="card">
+          <h3>More papers did not guarantee an answer</h3>
+          <p>
+            Broadening the scholarly collections improved retrieval beyond PubMed/arXiv-only
+            searches, but the standard comparison still lacked directly applicable evidence.
+          </p>
+          <p>
+            <strong>Lesson:</strong> label related findings honestly and measure answer usefulness,
+            not source count alone.
+          </p>
+        </div>
+        <h2>Do not accidentally claim</h2>
+        <ul>
+          <li>Exactly-once paid provider execution.</li>
+          <li>Fully measured COGS or a universal hard cloud-spend cap.</li>
+          <li>That the checker proves scientific truth.</li>
+          <li>That a processing success always answers the question.</li>
+          <li>That scale estimates are measured capacity.</li>
+          <li>That TypeScript types validate external JSON at runtime.</li>
+        </ul>
+      </section>
+      <nav class="footer-nav" aria-label="Chapter navigation">
+        <button id="prevChapter">← Previous</button><button id="nextChapter">Next →</button>
+      </nav>
+    </main>
+    <footer>
+      Prepared for reading on mobile. Based on the code and brief inspected on 3 November 2026, with
+      saved full research runs from 2 November. This guide makes no fresh live-service claim. All
+      guide content loads with this page; no model calls are made here.
+    </footer>
+    <script>
+      const chapters = [...document.querySelectorAll("main>section")];
+      const select = document.querySelector("#chapter");
+      let active = "quick";
+      function showChapter(id, scroll = true) {
+        if (!chapters.some((x) => x.id === id)) id = "quick";
+        active = id;
+        chapters.forEach((x) => (x.hidden = x.id !== id));
+        select.value = id;
+        const i = chapters.findIndex((x) => x.id === id);
+        document.querySelector("#progress").style.width = ((i + 1) / chapters.length) * 100 + "%";
+        document.querySelector("#prevChapter").disabled = i === 0;
+        document.querySelector("#nextChapter").disabled = i === chapters.length - 1;
+        document.title = select.selectedOptions[0].textContent + " — Fieldnotes";
+        if (scroll) window.scrollTo(0, 0);
+      }
+      function navigate(id) {
+        if (location.hash === "#" + id) showChapter(id);
+        else location.hash = id;
+      }
+      select.addEventListener("change", () => navigate(select.value));
+      window.addEventListener("hashchange", () => showChapter(location.hash.slice(1)));
+      document.querySelector("#prevChapter").onclick = () =>
+        navigate(chapters[chapters.findIndex((x) => x.id === active) - 1].id);
+      document.querySelector("#nextChapter").onclick = () =>
+        navigate(chapters[chapters.findIndex((x) => x.id === active) + 1].id);
+      document.querySelector("#topButton").onclick = () => window.scrollTo(0, 0);
+      showChapter(location.hash.slice(1) || "quick", false);
+      const diagrams = {
+        vps: [
+          ["1 · PRESENTATION", "Browser", "Submit a question; read saved progress."],
+          ["2 · ACCESS", "Vercel gateway", "Keep the frontend and session gateway, if desired."],
+          ["3 · ACCEPTANCE", "API process on your VPS", "Validate, save task, return ID."],
+          [
+            "4 · DELIVERY",
+            "A queue, for example Postgres jobs",
+            "Worker claims available work. This is a proposed VPS variant.",
+          ],
+          ["5 · EXECUTION", "Worker process on your VPS", "Retrieve → write → check → save."],
+          [
+            "6 · EXTERNAL PROVIDERS",
+            "Valyu + Gemini",
+            "Search sources; generate and check claims.",
+          ],
+        ],
+        gcp: [
+          ["1 · PRESENTATION", "Browser", "Submit a question; read saved progress."],
+          ["2 · ACCESS", "Vercel gateway", "Check session; call Google using federated identity."],
+          ["3 · ACCEPTANCE", "Private Cloud Run API", "Validate, save task, return ID."],
+          ["4 · DELIVERY", "Cloud Tasks", "Push the task ID to the worker by HTTP."],
+          ["5 · EXECUTION", "Private Cloud Run worker", "Claim → retrieve → write → check → save."],
+          [
+            "6 · EXTERNAL PROVIDERS",
+            "Valyu + Vertex Gemini",
+            "Search sources; generate and check claims.",
+          ],
+        ],
+      };
+      function architecture(mode) {
+        document.querySelector("#vpsBtn").setAttribute("aria-pressed", mode === "vps");
+        document.querySelector("#gcpBtn").setAttribute("aria-pressed", mode === "gcp");
+        document.querySelector("#architecture").innerHTML =
+          '<div class="flow">' +
+          diagrams[mode]
+            .map(
+              (x) =>
+                '<div class="flow-step"><small>' +
+                x[0] +
+                "</small><b>" +
+                x[1] +
+                "</b><span>" +
+                x[2] +
+                "</span></div>",
+            )
+            .join("") +
+          '</div><div class="answer"><span class="label">Shared durable state</span><p><strong>' +
+          (mode === "vps"
+            ? "Postgres, in this proposed version"
+            : "Firestore, in the current system") +
+          '</strong><br>Both API and worker use it. Stores tasks, ownership, progress and results.</p></div><div class="card"><span class="label">Recovery alongside the flow</span><p>' +
+          (mode === "vps" ? "Cron or a supervised scheduler" : "Cloud Scheduler") +
+          " triggers checks for accepted work needing delivery.</p></div>";
+      }
+      document.querySelector("#vpsBtn").onclick = () => architecture("vps");
+      document.querySelector("#gcpBtn").onclick = () => architecture("gcp");
+      architecture("vps");
+      const qa = [
+        [
+          "Why did you choose this stack?",
+          "I used managed delivery and storage so I could focus on reliable research and inspectable evidence. Google Cloud and Vercel were required; the individual services were my design choices.",
+          "Serverless and Firestore were not mandated. A Google VM with Postgres was also viable. Be ready to give one benefit and one trade-off for each chosen component.",
+        ],
+        [
+          "Why asynchronous?",
+          "Research takes longer than acceptance. Saving and queuing the task lets the request return quickly and processing continue independently.",
+          "The task ID connects the initial request to later status and report reads. Keeping the browser connected is not required for execution.",
+        ],
+        [
+          "Was this too much architecture for the assignment?",
+          "I would justify each mechanism by the failure it handles and cut abstractions or polish that do not strengthen the completed slice.",
+          "The queue separates acceptance from execution; saved state enables recovery; fencing stops stale writes. Extra layers must earn their complexity. GCP was required, but this exact service mix was my design choice.",
+        ],
+        [
+          "Why does Compare not answer the comparison?",
+          "The retrieved research did not establish comparable evidence under the requested conditions. The app labels related findings honestly, but retrieval still needs improvement.",
+          "The saved example has supported sodium-ion background without a direct grid-storage comparison against LFP. More sources and processing success are not the same as a useful answer.",
+        ],
+        [
+          "How do you stop duplicate results?",
+          "Idempotent submission, transactional claims, epoch-checked task-state writes and saved publication keys protect different boundaries.",
+          "The request key prevents duplicate task creation; claim and epoch protect ownership; block keys prevent duplicate publication on replay.",
+        ],
+        [
+          "What if the worker dies after a paid call?",
+          "Saved results can be reused. If the charge or outcome is uncertain, the reservation remains; I do not assume a retry is free.",
+          "External work can complete before a crash prevents saving its result. The system can stop visibly rather than make another uncertain paid call.",
+        ],
+        [
+          "What did you build?",
+          "A scientific research app with asynchronous processing, bounded provider spending and claims linked to inspectable evidence.",
+          "The three responsibilities are execution, evidence and presentation. Start with the user’s need before naming infrastructure.",
+        ],
+        [
+          "Walk me through one request.",
+          "The gateway checks access; the API saves and queues a task; the worker retrieves sources and checks generated claims; the browser follows saved progress.",
+          "Return a task ID before the research finishes. Firestore owns the state; the browser displays a copy.",
+        ],
+        [
+          "I close the tab. Does research stop?",
+          "No. Work runs through the queue and worker independently. Reopening restores saved state while the session still grants access.",
+          "A browser stream is a viewing connection, not the lifetime of the research job. Anonymous session expiry remains a recovery limitation.",
+        ],
+        [
+          "How do you avoid duplicate requests?",
+          "An owner-scoped idempotency key maps a repeated submission to its original task; different input under that key is rejected.",
+          "This deduplicates a submission, not every identical question forever. Queue redelivery needs separate ownership and publication protections.",
+        ],
+        [
+          "What if saving succeeds but enqueueing fails?",
+          "The accepted task remains durable. Scheduled reconciliation finds work needing delivery and re-enqueues it.",
+          "Saving in Firestore and enqueueing in Cloud Tasks are separate operations. Persisting delivery intent closes that recovery gap.",
+        ],
+        [
+          "How do leases differ from epochs?",
+          "A lease is temporary permission to work. An epoch identifies the ownership generation. Writes must belong to the current unexpired owner.",
+          "A can lose its lease; B claims a newer epoch; A’s stale write is rejected when it wakes up.",
+        ],
+        [
+          "Is a revision another epoch?",
+          "No. Epoch protects worker ownership. Revision orders saved task snapshots so readers ignore older updates.",
+          "A single worker epoch may produce many snapshot revisions. Neither is an arbitrary document-edit version history.",
+        ],
+        [
+          "What happens if the worker crashes?",
+          "A later attempt can claim after lease expiry and reuse durable checkpoints. Uncertain or interrupted paid work may fail visibly rather than be repeated.",
+          "Saved draft output, check results and publication keys support replay. A call completed externally but not saved remains an uncertainty.",
+        ],
+        [
+          "Do you guarantee exactly once?",
+          "Not for external paid calls. Delivery may repeat; transactional claims, fencing and checkpoints protect authoritative state and publication.",
+          "Fencing cannot recall a provider request already sent. Never promise exactly-once effects across systems without a protocol that establishes them.",
+        ],
+        [
+          "Why both a queue and a database?",
+          "The queue delivers work. The database records what was accepted, who owns it and what has already happened.",
+          "A queue message disappearing or repeating must not erase the durable task or duplicate its final result.",
+        ],
+        [
+          "How do you prevent made-up citations?",
+          "The model selects retained source and passage IDs. Code validates them and attaches saved source URLs and text.",
+          "That establishes citation identity. A separate support check is still needed to judge whether the passage justifies the sentence.",
+        ],
+        [
+          "What are support and coverage?",
+          "Support asks whether the passage justifies the whole claim. Coverage asks whether that claim answers a requested part of the question.",
+          "A dry-fabric warmth study can support a statement about dry fabric without answering which coat works better in rain.",
+        ],
+        [
+          "Why can a succeeded task be unanswered?",
+          "Processing finished, but no checked claim directly answered the question. Supported background is labelled as related evidence.",
+          "Status is execution; outcome is question coverage. Honest abstention helps, but retrieval still needs to become more useful.",
+        ],
+        [
+          "Does a second model make the answer reliable?",
+          "It catches evaluated support errors, but remains a model judgement. Deterministic guards and inspectable passages limit what I claim.",
+          "The writer and checker can share blind spots. Ten agent-labelled cases are a regression gate, not independent scientific validation.",
+        ],
+        [
+          "How is spend bounded?",
+          "Each provider call reserves allowance before execution, then settles from a receipt. Unknown charges retain the reservation; task operations and runtime are bounded.",
+          "Controls prevent further work within the policy. They do not undo provider overruns or fully allocate infrastructure costs.",
+        ],
+        [
+          "Did you meet the cost requirement?",
+          "Partially. Search charges are measured, model cost is token-estimated, and shared infrastructure is not yet allocated per task.",
+          "Complete COGS requires billing reconciliation and an explicit allocation rule. This is the clearest unfinished requirement.",
+        ],
+        [
+          "What is the main quality weakness?",
+          "A few fixed searches can return related papers without evidence for the exact question. I expose that gap rather than force an answer.",
+          "Evaluate query and source-selection changes before adding targeted follow-up searches. Measure usefulness alongside cost and latency.",
+        ],
+        [
+          "Why not implement adaptive search?",
+          "The brief limited implementation to one orchestration technique; I chose claim-to-passage grounding. Follow-up search also needs a revised generation and budget plan.",
+          "This is a defensible scope choice, not a claim that adaptive search would be useless or impossible.",
+        ],
+        [
+          "Why serverless rather than a VPS?",
+          "GCP was required. Managed containers and push delivery suit this bursty workload and reduce host operations. The trade-offs include cold starts and platform coupling; a VPS offers more control with more operating responsibility.",
+          "A VPS can still use managed queues and databases. Hosting choices do not remove the need for durable state, idempotency and recovery.",
+        ],
+        [
+          "Is Firestore essential?",
+          "No. Task-centred documents and transactions fit this slice. Postgres could support the workflow with a different data and claim implementation.",
+          "Firestore introduces document-size, query and contention trade-offs. Relational workloads can keep Postgres on managed infrastructure.",
+        ],
+        [
+          "Are you read-heavy or write-heavy?",
+          "Execution makes many durable writes and waits on providers. Viewing is read-heavy and can outgrow worker traffic. I would measure both separately.",
+          "Count writes per task, reads per viewer and connection load. There is no measured production ratio to quote.",
+        ],
+        [
+          "What breaks first at higher usage?",
+          "Provider latency and the single delivery slot constrain throughput first. I’d measure queue age, quotas and spend before raising worker concurrency.",
+          "Then inspect shared admission records, snapshot writes and browser fan-out. More workers can otherwise just create more rate-limit failures.",
+        ],
+        [
+          "Why SSE instead of WebSockets?",
+          "The browser needs one-way progress updates. SSE carries saved snapshots, with polling as a fallback for stalled or disconnected streams.",
+          "Refresh restores server truth. Revision ordering prevents an old response from replacing newer state.",
+        ],
+        [
+          "What would you do next?",
+          "Finish per-task accounting, improve and evaluate retrieval usefulness, then strengthen load and recovery evidence.",
+          "Keep these as three priorities. Scaled architecture was requested as a writeup; measured production capacity remains unestablished.",
+        ],
+        [
+          "How did you use coding agents?",
+          "Describe the actual assistance and separate reviews, then demonstrate that you understand the code, decisions, checks and limitations.",
+          "Do not imply you personally typed everything. Be ready to trace a request, explain a failure case and make a small change.",
+        ],
+      ];
+      let qi = 0;
+      function renderDrill() {
+        document.querySelector("#drillCount").textContent =
+          "Question " + (qi + 1) + " of " + qa.length;
+        document.querySelector("#drillQuestion").textContent = qa[qi][0];
+        document.querySelector("#drillAnswer").innerHTML =
+          '<div class="answer"><span class="label">Short answer</span><p>' +
+          qa[qi][1] +
+          '</p></div><p class="mini"><strong>One layer deeper:</strong> ' +
+          qa[qi][2] +
+          "</p>";
+        document.querySelector("#drillAnswer").hidden = true;
+        document.querySelector("#reveal").hidden = false;
+        document.querySelector("#previousQuestion").disabled = qi === 0;
+        document.querySelector("#nextQuestion").disabled = qi === qa.length - 1;
+      }
+      document.querySelector("#reveal").onclick = () => {
+        document.querySelector("#drillAnswer").hidden = false;
+        document.querySelector("#reveal").hidden = true;
+      };
+      document.querySelector("#previousQuestion").onclick = () => {
+        qi--;
+        renderDrill();
+      };
+      document.querySelector("#nextQuestion").onclick = () => {
+        qi++;
+        renderDrill();
+      };
+      document.querySelector("#questions").innerHTML = qa
+        .map(
+          (q, i) =>
+            '<article class="qa"><span class="pill">' +
+            String(i + 1).padStart(2, "0") +
+            "</span><h3>" +
+            q[0] +
+            "</h3><p>" +
+            q[1] +
+            "</p><details><summary>Understand the answer</summary><p>" +
+            q[2] +
+            "</p></details></article>",
+        )
+        .join("");
+      renderDrill();
+    </script>
+  </body>
+</html>

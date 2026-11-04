@@ -1,0 +1,9 @@
+{
+  "alternatives": [
+    "sodium-ion",
+    "lithium iron phosphate"
+  ],
+  "question": "How do cycle life and low-temperature performance compare for stationary grid storage?",
+  "schemaVersion": 1,
+  "kind": "compare"
+}

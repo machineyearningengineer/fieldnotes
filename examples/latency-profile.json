@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "observedAt": "2026-11-02T21:40:00+00:00",
+  "samples": [
+    {
+      "sourceCommit": "ec808c6",
+      "disposition": "retained",
+      "taskId": "1dbbe6e2-cc9e-48b0-ac75-caafed2ef9ea",
+      "reference": "376cb6eaf4384bfcc07601e47fe551dc",
+      "input": {
+        "schemaVersion": 1,
+        "kind": "compare",
+        "question": "How do cycle life and low-temperature performance compare for stationary grid storage?",
+        "alternatives": [
+          "sodium-ion",
+          "lithium iron phosphate"
+        ]
+      },
+      "status": "succeeded",
+      "timings": {
+        "searchArtifactSaveMs": 78,
+        "search_q1_ms": 858,
+        "firstSourcesMs": 3332,
+        "search_q2_ms": 442,
+        "search_q3_ms": 430,
+        "firstBlockMs": 7381,
+        "modelHeadersMs": 1282,
+        "modelFirstChunkMs": 1286,
+        "modelArtifactSaveMs": 144,
+        "modelBlockSaveMs": 164,
+        "modelElapsedMs": 7260,
+        "modelChunkCount": 34,
+        "modelUsageSaveMs": 20,
+        "workerMs": 10075,
+        "totalMs": 12187
+      },
+      "stageDurationsMs": {
+        "queued": 2153,
+        "searching": 2526,
+        "writing": 7443,
+        "checking": 65
+      },
+      "measuredSearchUSD": 0.002189,
+      "estimatedSynthesisUSD": 0.011388
+    },
+    {
+      "sourceCommit": "e8f5bf0",
+      "disposition": "rolled_back",
+      "taskId": "43077365-5903-48b9-845f-7e43ac031f10",
+      "reference": "01eb8ee556905b77788d64980928168c",
+      "input": {
+        "schemaVersion": 1,
+        "kind": "compare",
+        "question": "How do cycle life and low-temperature performance compare for stationary grid storage?",
+        "alternatives": [
+          "sodium-ion",
+          "lithium iron phosphate"
+        ]
+      },
+      "status": "succeeded",
+      "timings": {
+        "searchArtifactSaveMs": 107,
+        "search_q1_ms": 845,
+        "firstSourcesMs": 2766,
+        "search_q2_ms": 477,
+        "search_q3_ms": 424,
+        "firstBlockMs": 8320,
+        "modelHeadersMs": 3040,
+        "modelFirstChunkMs": 3042,
+        "modelArtifactSaveMs": 273,
+        "modelBlockSaveMs": 235,
+        "modelElapsedMs": 9260,
+        "modelChunkCount": 32,
+        "modelUsageSaveMs": 53,
+        "workerMs": 12213,
+        "totalMs": 13831
+      },
+      "stageDurationsMs": {
+        "queued": 1656,
+        "searching": 2553,
+        "writing": 9550,
+        "checking": 72
+      },
+      "measuredSearchUSD": 0.002189,
+      "estimatedSynthesisUSD": 0.009999
+    },
+    {
+      "sourceCommit": "98f37c7",
+      "disposition": "baseline",
+      "taskId": "623bcfe1-ee55-46e8-bb8b-b442559455ca",
+      "reference": "79a53e20f8365acb8f0a91b51e741aa6",
+      "input": {
+        "question": "How does Pinterest combine an image or selected object with a text refinement? Explain the retrieval and reranking mechanism, why its parts exist, and the limits of the published evidence.",
+        "schemaVersion": 1,
+        "kind": "discover"
+      },
+      "status": "succeeded",
+      "timings": {
+        "firstSourcesMs": 3306,
+        "firstBlockMs": 8552,
+        "firstVerifiedSectionMs": 4862,
+        "modelHeadersMs": 1081,
+        "modelStreamMs": 7963,
+        "modelElapsedMs": 11746,
+        "supportCheckMs": 8082,
+        "checkedClaims": 11,
+        "withheldClaims": 2,
+        "search_q1_ms": 486,
+        "search_q2_ms": 983
+      },
+      "postStreamTailMs": 3783,
+      "stageDurationsMs": {
+        "queued": 2029,
+        "searching": 1597,
+        "writing": 11981,
+        "checking": 77
+      },
+      "supportChecks": 4,
+      "note": "Serial passage checks."
+    },
+    {
+      "sourceCommit": "bcbeb40",
+      "disposition": "retained",
+      "taskId": "0af546e5-640c-49d5-8772-02d840448d6a",
+      "reference": "189dd482d031b37d85574b45ba6606c4",
+      "input": {
+        "schemaVersion": 1,
+        "kind": "discover",
+        "question": "How does Pinterest combine an image or selected object with a text refinement? Explain the retrieval and reranking mechanism, why its parts exist, and the limits of the published evidence."
+      },
+      "status": "succeeded",
+      "timings": {
+        "firstSourcesMs": 2154,
+        "firstBlockMs": 12378,
+        "firstVerifiedSectionMs": 5674,
+        "modelHeadersMs": 2197,
+        "modelStreamMs": 11661,
+        "modelElapsedMs": 13599,
+        "supportCheckMs": 8801,
+        "checkedClaims": 14,
+        "withheldClaims": 4,
+        "search_q1_ms": 5822,
+        "search_q2_ms": 508
+      },
+      "postStreamTailMs": 1938,
+      "stageDurationsMs": {
+        "queued": 533,
+        "searching": 6109,
+        "writing": 13783,
+        "checking": 63
+      },
+      "supportChecks": 5,
+      "note": "Overlapped passage checks. Post-stream tail 1.94s versus 3.78s, with 5 checks instead of 4. End-to-end was slower because one Valyu search took 5.8s and the Gemini stream took 11.7s."
+    },
+    {
+      "sourceCommit": "bcbeb40",
+      "disposition": "quality_failure",
+      "taskId": "50496c3d-0aa7-4522-bae3-5eebdf7ac404",
+      "reference": "6f2a8fdd20e69727b97dfa77454f2c69",
+      "input": {
+        "schemaVersion": 1,
+        "kind": "compare",
+        "question": "How do cycle life and low-temperature performance compare for stationary grid storage?",
+        "alternatives": [
+          "sodium-ion",
+          "lithium iron phosphate"
+        ]
+      },
+      "status": "failed",
+      "timings": {
+        "firstSourcesMs": 3034,
+        "modelHeadersMs": 1962,
+        "modelStreamMs": 4926,
+        "modelElapsedMs": 6938,
+        "supportCheckMs": 2010,
+        "checkedClaims": 4,
+        "withheldClaims": 4,
+        "search_q1_ms": 782,
+        "search_q2_ms": 2187,
+        "search_q3_ms": 7051
+      },
+      "postStreamTailMs": 2012,
+      "stageDurationsMs": {
+        "queued": 1985,
+        "searching": 8109,
+        "writing": 7144
+      },
+      "supportChecks": 1,
+      "note": "NO_EVIDENCE: the LFP academic search returned no results and the two sodium-ion papers were off-topic; the checker withheld all four claims. The same question succeeded on 23fcbd8 only through web sources that the e127038 boundary now excludes. One section, so overlap was not exercised."
+    }
+  ],
+  "conclusion": "No demonstrated end-to-end speedup. Short model-local identifiers were rolled back. Model opening wait varied materially; neither sample establishes p50 or p90.",
+  "qualityFinding": {
+    "taskId": "43077365-5903-48b9-845f-7e43ac031f10",
+    "section": "Cycle Life Characteristics and Stationary Storage Considerations",
+    "issue": "A paragraph mixes general lithium-ion operating guidance with an LFP cooling experiment but selects only the general-guidance passage. Citation identity validation does not establish whole-claim entailment.",
+    "causation": "Two stochastic samples cannot establish that aliases caused this failure. No scientific-quality improvement or equivalence is claimed."
+  },
+  "retainedChanges": [
+    "durable search reuse",
+    "durably completed model finalization",
+    "one confirmed-zero-charge retry",
+    "uncertain reservations retained",
+    "coalesced diagnostic model-usage writes",
+    "adapter stage timings"
+  ],
+  "limits": {
+    "loadTested": false,
+    "independentScientificReview": false,
+    "modelOrScientificInstructionsChanged": false,
+    "completeMeasuredCOGS": null
+  },
+  "nextOptimizationOrder": [
+    "Measure first checked section and final completion separately on organic tasks, separating queue/cold-start and provider wait.",
+    "Keep re-opening a saved note distinct from generating fresh research; no semantic cache across private or stale questions.",
+    "Strengthen claim/passage evaluation before trying a faster model, less evidence or parallel generation.",
+    "Consider bounded parallel retrieval and worker capacity only with concurrency/accounting checks and measured budget headroom."
+  ],
+  "overlapConclusion": "One Pinterest pair: the post-stream tail fell from 3.78s to 1.94s with more checks. Provider wait varied more than the saving; no percentile or end-to-end speedup is established."
+}

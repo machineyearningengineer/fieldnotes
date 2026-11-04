@@ -1,0 +1,19 @@
+{
+  "name": "@valyu-research/adapters",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./cloud": "./src/cloud.ts",
+    "./live": "./src/live.ts"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "9.4.0",
+    "@google/genai": "2.32.0",
+    "@valyu-research/contracts": "workspace:*",
+    "@valyu-research/research": "workspace:*",
+    "effect": "4.1.2",
+    "google-auth-library": "10.9.0",
+    "valyu-js": "2.11.5"
+  }
+}

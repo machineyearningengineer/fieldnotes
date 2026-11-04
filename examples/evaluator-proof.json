@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "api": [
+    {
+      "observedAt": "2026-11-02T23:21:39.299Z",
+      "login": "reused same evaluator session",
+      "kind": "discover",
+      "taskId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486",
+      "reference": "44b026a1c1a9939af153cec36c448401",
+      "url": "https://fieldnotes-valyu.vercel.app/tasks/b791b0a8-1cd2-4d72-bb23-8c09410dd486",
+      "status": "succeeded",
+      "acceptanceMs": 687,
+      "timings": {
+        "searchArtifactSaveMs": 83,
+        "search_q2_ms": 1022,
+        "firstSourcesMs": 3177,
+        "search_q1_ms": 8048,
+        "modelHeadersMs": 12265,
+        "modelFirstChunkMs": 12268,
+        "modelArtifactSaveMs": 185,
+        "ineligibleClaims": 0,
+        "withheldClaims": 2,
+        "firstBlockMs": 27027,
+        "supportCheckMs": 1563,
+        "checkedClaims": 4,
+        "firstVerifiedSectionMs": 15999,
+        "modelBlockSaveMs": 65,
+        "modelStreamMs": 16423,
+        "workerMs": 28621,
+        "totalMs": 30483
+      },
+      "citationCount": 4,
+      "citationIdentity": "all links belong to retained sources; entailment requires review",
+      "validationFailure": {
+        "httpStatus": 400,
+        "code": "INVALID_INPUT"
+      },
+      "idempotentReplaySameTask": true,
+      "usage": [
+        {
+          "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:search:q2:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 5625,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_4525cbfd-0dec-4324-816f-cae2084c6ad4"
+        },
+        {
+          "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:search:q1:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 1875,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_45363531-3267-462b-afa3-fe3c59c37383"
+        },
+        {
+          "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:model:model:1",
+          "service": "model",
+          "state": "settled",
+          "reservedMicros": 60000,
+          "costMicros": 10303,
+          "basis": "estimate",
+          "detail": "Vertex gemini-3.8-flash usage: 8668 input, 764 output, 0 thought tokens"
+        },
+        {
+          "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:model:support-1:1",
+          "service": "model",
+          "state": "settled",
+          "reservedMicros": 9656,
+          "costMicros": 1355,
+          "basis": "estimate",
+          "detail": "Passage check support-1: 1487 input, 31 output, 0 thought tokens"
+        },
+        {
+          "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:model:support-2:1",
+          "service": "model",
+          "state": "settled",
+          "reservedMicros": 9672,
+          "costMicros": 1535,
+          "basis": "estimate",
+          "detail": "Passage check support-2: 1555 input, 61 output, 0 thought tokens"
+        }
+      ],
+      "output": "examples/discover.json"
+    },
+    {
+      "observedAt": "2026-11-02T23:22:07.573Z",
+      "login": "reused same evaluator session",
+      "kind": "compare",
+      "taskId": "7a53df82-ce55-447a-8092-e93aa0d4953d",
+      "reference": "5d8ac3282fb9c6cc62786235dad9579e",
+      "url": "https://fieldnotes-valyu.vercel.app/tasks/7a53df82-ce55-447a-8092-e93aa0d4953d",
+      "status": "succeeded",
+      "acceptanceMs": 1175,
+      "timings": {
+        "searchArtifactSaveMs": 114,
+        "search_q1_ms": 528,
+        "firstSourcesMs": 2309,
+        "search_q2_ms": 1924,
+        "search_q3_ms": 12491,
+        "modelHeadersMs": 1309,
+        "modelFirstChunkMs": 1310,
+        "modelArtifactSaveMs": 159,
+        "ineligibleClaims": 0,
+        "withheldClaims": 2,
+        "modelStreamMs": 4367,
+        "supportCheckMs": 1901,
+        "checkedClaims": 2,
+        "firstBlockMs": 20860,
+        "workerMs": 20975,
+        "totalMs": 21461
+      },
+      "citationCount": 1,
+      "citationIdentity": "all links belong to retained sources; entailment requires review",
+      "validationFailure": {
+        "httpStatus": 400,
+        "code": "INVALID_INPUT"
+      },
+      "idempotentReplaySameTask": true,
+      "usage": [
+        {
+          "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:search:q3:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 1875,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_e38ac52f-bf00-4302-b03a-b15fdb1313de"
+        },
+        {
+          "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:search:q2:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 5313,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_8ac296ca-c1b1-4cfd-8774-41a223a23818"
+        },
+        {
+          "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:search:q1:1",
+          "service": "search",
+          "state": "settled",
+          "reservedMicros": 10000,
+          "costMicros": 5625,
+          "basis": "provider_measured",
+          "detail": "Valyu transaction tx_73ca5923-dd8d-43aa-bd85-4a9fe52063cb"
+        },
+        {
+          "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:model:model:1",
+          "service": "model",
+          "state": "settled",
+          "reservedMicros": 60000,
+          "costMicros": 9512,
+          "basis": "estimate",
+          "detail": "Vertex gemini-3.8-flash usage: 9004 input, 505 output, 0 thought tokens"
+        },
+        {
+          "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:model:support-1:1",
+          "service": "model",
+          "state": "settled",
+          "reservedMicros": 7747,
+          "costMicros": 1108,
+          "basis": "estimate",
+          "detail": "Passage check support-1: 1143 input, 40 output, 0 thought tokens"
+        },
+        {
+          "operationId": "7a53df82-ce55-447a-8092-e93aa0d4953d:model:support-2:1",
+          "service": "model",
+          "state": "settled",
+          "reservedMicros": 7941,
+          "costMicros": 1521,
+          "basis": "estimate",
+          "detail": "Passage check support-2: 1653 input, 38 output, 0 thought tokens"
+        }
+      ],
+      "output": "examples/compare.json"
+    }
+  ]
+}

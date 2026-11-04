@@ -1,0 +1,431 @@
+{
+  "schemaVersion": 1,
+  "id": "b791b0a8-1cd2-4d72-bb23-8c09410dd486",
+  "input": {
+    "schemaVersion": 1,
+    "kind": "discover",
+    "question": "What evidence supports sodium-ion batteries for stationary grid storage?"
+  },
+  "status": "succeeded",
+  "outcome": "answered",
+  "stage": "complete",
+  "revision": 20,
+  "createdAt": "2026-11-02T23:21:07.928Z",
+  "updatedAt": "2026-11-02T23:21:38.411Z",
+  "expiresAt": "2026-11-02T23:26:07.928Z",
+  "simulation": false,
+  "queries": [
+    {
+      "id": "q1",
+      "query": "What evidence supports sodium-ion batteries for stationary grid storage?",
+      "purpose": "Direct evidence and primary publications",
+      "sourceType": "web",
+      "status": "complete",
+      "sourceIds": [
+        "s-4cc0c7cf91e1b67f2b0bb78b",
+        "s-f3f61b870ec5c54730cecbd2",
+        "s-733ed1f25957f6ca93471ebd"
+      ]
+    },
+    {
+      "id": "q2",
+      "query": "What evidence supports sodium-ion batteries for stationary grid storage? limitations conflicting evidence",
+      "purpose": "Look for uncertainty and disagreement",
+      "sourceType": "academic",
+      "status": "complete",
+      "sourceIds": [
+        "s-509368fa1f11f648c0f31f49",
+        "s-2d70ebca5a106083a8a14fae",
+        "s-2c775ae7c8ae493f3c5085b6"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s-4cc0c7cf91e1b67f2b0bb78b",
+      "title": "Frontiers | Performance evaluation of sodium-ion batteries for microgrid and off-grid energy storage applications",
+      "url": "https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2026.2007977/full",
+      "authors": [],
+      "publishedAt": "2026-10-27",
+      "sourceType": "website",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Front. Chem., 27 October 2026",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 49322,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 761
+            },
+            {
+              "start": 2177,
+              "end": 3153
+            },
+            {
+              "start": 3154,
+              "end": 3690
+            },
+            {
+              "start": 3692,
+              "end": 4695
+            },
+            {
+              "start": 14108,
+              "end": 14635
+            }
+          ]
+        },
+        "retrievalRank": 0,
+        "providerSource": "web",
+        "price": 0.000625,
+        "relevanceScore": 0.9266872701926347
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-f3f61b870ec5c54730cecbd2",
+      "title": "Sodium-ion batteries: emerging energy storage technology for future energy systems - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1572665726006569",
+      "authors": [],
+      "publishedAt": "2026-07-20",
+      "sourceType": "website",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "[[Image: Journal of Electroanalytical Chemistry]](https://www.sciencedirect.com/journal/journal-of-electroanalytical-chemistry/vol/1018/suppl/C)",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 28864,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 942
+            },
+            {
+              "start": 2767,
+              "end": 3776
+            },
+            {
+              "start": 12268,
+              "end": 13320
+            },
+            {
+              "start": 13322,
+              "end": 13938
+            },
+            {
+              "start": 13940,
+              "end": 14980
+            }
+          ]
+        },
+        "retrievalRank": 1,
+        "providerSource": "web",
+        "price": 0.000625,
+        "relevanceScore": 0.8691531221764789
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-733ed1f25957f6ca93471ebd",
+      "title": "Sodium-Ion Batteries: Linking Liquid and Solid-State Electrolytes, Electrode Compatibility, and Commercial Viability",
+      "url": "https://doi.org/10.3390/batteries12080303",
+      "authors": [],
+      "publishedAt": "2026-08-12",
+      "sourceType": "website",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "The principal cathode and anode families are then evaluated in terms of practical voltage, reversible capacity, cycling stability, raw-material exposure, manufacturability, and end-of-life implications. A distinctive contribution of this work is the explicit separation of thermod",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 25307,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 649
+            },
+            {
+              "start": 651,
+              "end": 1463
+            },
+            {
+              "start": 7250,
+              "end": 8249
+            },
+            {
+              "start": 11467,
+              "end": 12275
+            },
+            {
+              "start": 12277,
+              "end": 13344
+            }
+          ]
+        },
+        "retrievalRank": 2,
+        "providerSource": "web",
+        "price": 0.000625,
+        "relevanceScore": 0.8569850502711003
+      },
+      "queryIds": [
+        "q1"
+      ]
+    },
+    {
+      "id": "s-509368fa1f11f648c0f31f49",
+      "title": "Recent Advances in Sodium-Ion Diffusivity in Sodium-Ion Batteries: Mechanisms, Characterization Techniques, Materials Design, and Future Perspectives",
+      "url": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15005593/v1",
+      "authors": [
+        "Taif Mahbub Shapnow",
+        "Suvrojit Chanda",
+        "Md. Maruf Mullah"
+      ],
+      "publishedAt": "2026-07-02",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "One of the fundamental kinetic parameters governing the electrochemical performance of sodium-ion batteries is Ion Diffusivity. Though sodium-ion batteries have advantages when it comes to cost, su...",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 7172,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 1032
+            },
+            {
+              "start": 1838,
+              "end": 2827
+            },
+            {
+              "start": 2828,
+              "end": 3696
+            },
+            {
+              "start": 3698,
+              "end": 4581
+            },
+            {
+              "start": 4582,
+              "end": 5392
+            }
+          ]
+        },
+        "retrievalRank": 0,
+        "providerSource": "valyu/valyu-chemrxiv",
+        "doi": "10.26434/chemrxiv.15005593/v1",
+        "citation": "Taif Mahbub Shapnow et al. (2026). Recent Advances in Sodium-Ion Diffusivity in Sodium-Ion Batteries: Mechanisms, Characterization Techniques, Materials Design, and Future Perspectives.https://doi.org/10.26434/chemrxiv.15005593/v1",
+        "price": 0.005,
+        "relevanceScore": 0.6961518185820695
+      },
+      "queryIds": [
+        "q2"
+      ]
+    },
+    {
+      "id": "s-2d70ebca5a106083a8a14fae",
+      "title": "Battery selection for optimal grid-outage resilient photovoltaic and battery systems",
+      "url": "https://arxiv.org/abs/1901.11389",
+      "authors": [
+        "Stamatis Tsianikas",
+        "Jian Zhou",
+        "Nooshin Yousefi",
+        "David W. Coit"
+      ],
+      "publishedAt": "2019-01-01",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "The first and most important purpose of the current research work is to investigate the effects that different battery types have on the optimal configuration of photovoltaic (PV) and battery systems, from both economic and resilience perspectives. Many industry reports, as well ",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 3730,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 3730
+            }
+          ]
+        },
+        "retrievalRank": 1,
+        "providerSource": "valyu/valyu-arxiv",
+        "doi": "https://doi.org/10.48550/arxiv.1901.11389",
+        "citation": "Stamatis Tsianikas et al. (2019). Battery selection for optimal grid-outage resilient photovoltaic and battery systems.https://doi.org/10.48550/arxiv.1901.11389",
+        "price": 0.0003125,
+        "relevanceScore": 0.5797386992771041
+      },
+      "queryIds": [
+        "q2"
+      ]
+    },
+    {
+      "id": "s-2c775ae7c8ae493f3c5085b6",
+      "title": "Barriers to grid-connected battery systems: Evidence from the Spanish electricity market",
+      "url": "https://arxiv.org/abs/2007.00486",
+      "authors": [
+        "Yu Hu",
+        "David Soler Soneira",
+        "Mar\u00eda Manzano"
+      ],
+      "publishedAt": "2020-06-28",
+      "sourceType": "paper",
+      "excerpt": "[Retained excerpt omitted from public edition; inspect original source URL.]",
+      "relevance": "Electrical energy storage is considered essential for the future energy systems. Among all the energy storage technologies, battery systems may provide flexibility to the power grid in a more distributed and decentralized way. In countries with deregulated electricity markets, gr",
+      "metadata": {
+        "excerptSelection": {
+          "version": 1,
+          "sourceLength": 5813,
+          "ranges": [
+            {
+              "start": 0,
+              "end": 5813
+            }
+          ]
+        },
+        "retrievalRank": 2,
+        "providerSource": "valyu/valyu-arxiv",
+        "doi": "",
+        "citation": "Yu Hu et al. (2020). Barriers to grid-connected battery systems: Evidence from the Spanish electricity market.https://arxiv.org/abs/2007.00486",
+        "price": 0.0003125,
+        "relevanceScore": 0.5683827324202673
+      },
+      "queryIds": [
+        "q2"
+      ]
+    }
+  ],
+  "reportDraft": {
+    "blocks": [
+      {
+        "id": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:block:1",
+        "markdown": "Polyanionic cathodes are attractive for stationary storage due to intrinsic safety characteristics that simplify system design, alongside reduced susceptibility to slurry gelation during processing\\. [3](https://doi.org/10.3390/batteries12080303)\n\nEarly deployment of sodium-ion technology in cold-climate stationary storage is supported by its demonstrated low-temperature performance advantage\\. [3](https://doi.org/10.3390/batteries12080303)"
+      },
+      {
+        "id": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:block:2",
+        "markdown": "## Application Evaluation and Practical Limitations\n\nFull-cell competitiveness for grid storage requires balancing electrode capacities, first-cycle losses, voltage efficiency, interfacial stability, and manufacturing scale\\. [1](https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2026.2007977/full)\n\nIntrinsically low sodium-ion diffusivity in cathode materials causes voltage polarization and restricts high-rate performance, presenting ongoing operational challenges\\. [4](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15005593/v1)"
+      },
+      {
+        "id": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:block:3",
+        "markdown": "## Evidence limits\n\n4 draft claims were withheld because support or relevance could not be established."
+      }
+    ]
+  },
+  "report": "Polyanionic cathodes are attractive for stationary storage due to intrinsic safety characteristics that simplify system design, alongside reduced susceptibility to slurry gelation during processing\\. [3](https://doi.org/10.3390/batteries12080303)\n\nEarly deployment of sodium-ion technology in cold-climate stationary storage is supported by its demonstrated low-temperature performance advantage\\. [3](https://doi.org/10.3390/batteries12080303)\n\n## Application Evaluation and Practical Limitations\n\nFull-cell competitiveness for grid storage requires balancing electrode capacities, first-cycle losses, voltage efficiency, interfacial stability, and manufacturing scale\\. [1](https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2026.2007977/full)\n\nIntrinsically low sodium-ion diffusivity in cathode materials causes voltage polarization and restricts high-rate performance, presenting ongoing operational challenges\\. [4](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15005593/v1)\n\n## Evidence limits\n\n4 draft claims were withheld because support or relevance could not be established.",
+  "error": null,
+  "usage": [
+    {
+      "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:search:q2:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 10000,
+      "costMicros": 5625,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_4525cbfd-0dec-4324-816f-cae2084c6ad4"
+    },
+    {
+      "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:search:q1:1",
+      "service": "search",
+      "state": "settled",
+      "reservedMicros": 10000,
+      "costMicros": 1875,
+      "basis": "provider_measured",
+      "detail": "Valyu transaction tx_45363531-3267-462b-afa3-fe3c59c37383"
+    },
+    {
+      "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:model:model:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 60000,
+      "costMicros": 10303,
+      "basis": "estimate",
+      "detail": "Vertex gemini-3.8-flash usage: 8668 input, 764 output, 0 thought tokens"
+    },
+    {
+      "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:model:support-1:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 9656,
+      "costMicros": 1355,
+      "basis": "estimate",
+      "detail": "Passage check support-1: 1487 input, 31 output, 0 thought tokens"
+    },
+    {
+      "operationId": "b791b0a8-1cd2-4d72-bb23-8c09410dd486:model:support-2:1",
+      "service": "model",
+      "state": "settled",
+      "reservedMicros": 9672,
+      "costMicros": 1535,
+      "basis": "estimate",
+      "detail": "Passage check support-2: 1555 input, 61 output, 0 thought tokens"
+    }
+  ],
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-11-02T23:21:07.928Z",
+      "stage": "queued",
+      "message": "Research queued"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-11-02T23:21:09.828Z",
+      "stage": "searching",
+      "message": "Finding relevant evidence"
+    },
+    {
+      "sequence": 6,
+      "at": "2026-11-02T23:21:11.106Z",
+      "stage": "searching",
+      "message": "3 sources found for this search"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-11-02T23:21:18.765Z",
+      "stage": "searching",
+      "message": "3 sources found for this search"
+    },
+    {
+      "sequence": 9,
+      "at": "2026-11-02T23:21:18.953Z",
+      "stage": "writing",
+      "message": "Putting the evidence together"
+    },
+    {
+      "sequence": 19,
+      "at": "2026-11-02T23:21:38.336Z",
+      "stage": "checking",
+      "message": "Checking source links and report structure"
+    },
+    {
+      "sequence": 20,
+      "at": "2026-11-02T23:21:38.411Z",
+      "stage": "complete",
+      "message": "Evidence brief ready"
+    }
+  ],
+  "traceId": "44b026a1c1a9939af153cec36c448401",
+  "timings": {
+    "searchArtifactSaveMs": 83,
+    "search_q2_ms": 1022,
+    "firstSourcesMs": 3177,
+    "search_q1_ms": 8048,
+    "modelHeadersMs": 12265,
+    "modelFirstChunkMs": 12268,
+    "modelArtifactSaveMs": 185,
+    "ineligibleClaims": 0,
+    "withheldClaims": 2,
+    "firstBlockMs": 27027,
+    "supportCheckMs": 1563,
+    "checkedClaims": 4,
+    "firstVerifiedSectionMs": 15999,
+    "modelBlockSaveMs": 65,
+    "modelStreamMs": 16423,
+    "workerMs": 28621,
+    "totalMs": 30483
+  }
+}

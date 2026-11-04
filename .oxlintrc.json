@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "jsx-a11y"],
+  "categories": { "correctness": "error" },
+  "ignorePatterns": ["backend/**", "**/.next/**", "**/dist/**", "**/*.generated.*"],
+  "overrides": [
+    {
+      "files": ["packages/research/**/*.ts", "packages/contracts/**/*.ts"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              "@google-cloud/*",
+              "valyu-js",
+              "next/*",
+              "@tanstack/*",
+              "@valyu-research/adapters"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

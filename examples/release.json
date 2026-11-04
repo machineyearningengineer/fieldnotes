@@ -1,0 +1,102 @@
+{
+  "observedAt": "2026-11-02T23:23:36.451151+00:00",
+  "project": "fieldnotes-valyu-20261102",
+  "region": "europe-west2",
+  "deployedSourceCommit": "c01f11d",
+  "frontend": {
+    "url": "https://fieldnotes-valyu.vercel.app",
+    "deployment": "dpl_4fmF2yfeTsqtz1SdcYPjW1qqe9iE"
+  },
+  "api": {
+    "revision": "fieldnotes-api-00022-6hd",
+    "url": "https://fieldnotes-api-k5pptmahvq-nw.a.run.app"
+  },
+  "worker": {
+    "revision": "fieldnotes-worker-00025-jhw",
+    "url": "https://fieldnotes-worker-k5pptmahvq-nw.a.run.app",
+    "model": "gemini-3.8-flash"
+  },
+  "backendImage": "europe-west2-docker.pkg.dev/fieldnotes-valyu-20261102/fieldnotes/backend@sha256:48644a4ab72aca2fbe0ecc6b995df11e6f62819468eb0a8cadee36220c673009",
+  "researchContractVersion": 1,
+  "modelPriceReviewAt": "2027-01-01T00:00:00Z",
+  "providerLifetimeLimitUSD": 1.5,
+  "newSpendAuthorityGBP": 5,
+  "creditsVerified": false,
+  "independentScientificReview": false,
+  "accountingCompleteness": "partial",
+  "launchAllocation": {
+    "observedAt": "2026-11-02T23:23:36.451151+00:00",
+    "taskCount": 49,
+    "admissionReservationUSD": 1.110144,
+    "lifetimeLimitUSD": 1.5,
+    "availableFullTaskSlots": 5,
+    "reconciliationApplied": true,
+    "basis": "Settled provider receipts use recorded costs (synthesis remains token-estimated); unknown calls retain full reservations or larger known costs",
+    "billedAmountVerified": false
+  },
+  "finalEvaluatorProof": "evaluator-proof.json",
+  "browserObservation": {
+    "observedAt": "2026-11-02T18:13:50.632Z",
+    "initialClientChunks": 9,
+    "protectedValuesAbsent": true
+  },
+  "comparePrint": {
+    "files": [
+      "discover.pdf",
+      "compare.pdf"
+    ],
+    "size": "A4",
+    "visualReview": "every rendered page inspected",
+    "method": "isolated headless Chrome print"
+  },
+  "latencyProfile": "latency-profile.json",
+  "latestEvaluatorProof": {
+    "proof": "evaluator-proof.json",
+    "scope": "Discover and Compare on c01f11d through the evaluator flow; Discover trace confirmed nine spans (root, three steps, two searches, generation, two checks)"
+  },
+  "previousRelease": {
+    "observedAt": "2026-11-02T22:29:38.684144+00:00",
+    "deployedSourceCommit": "04ab36f",
+    "frontend": {
+      "url": "https://fieldnotes-valyu.vercel.app",
+      "deployment": "dpl_6RC1Afv2wGFmKLSPdPz9B4shFPsc"
+    },
+    "api": {
+      "revision": "fieldnotes-api-00016-qld",
+      "url": "https://fieldnotes-api-k5pptmahvq-nw.a.run.app"
+    },
+    "worker": {
+      "revision": "fieldnotes-worker-00019-phm",
+      "url": "https://fieldnotes-worker-k5pptmahvq-nw.a.run.app",
+      "model": "gemini-3.8-flash"
+    },
+    "backendImage": "europe-west2-docker.pkg.dev/fieldnotes-valyu-20261102/fieldnotes/backend@sha256:3a367a0332df7bc28a5a51aa058cde6bc3424b9a2e60622571e12db6126b1251"
+  },
+  "queue": {
+    "maxAttempts": 3,
+    "minBackoff": "10s",
+    "maxBackoff": "60s"
+  },
+  "offlineEvaluation": {
+    "set": "../evaluation/claim-support.json",
+    "cases": 10,
+    "passed": 10,
+    "estimatedUSD": 0.0038,
+    "laxCheckerControl": "two failures, exit 1"
+  },
+  "slices": {
+    "landed": [
+      "step runner",
+      "single ledger",
+      "queue-level retries",
+      "explicit outcome",
+      "per-step and provider trace spans",
+      "offline evaluation gate replaces in-worker replay",
+      "billing reconciliation documented (not implemented)",
+      "README restructure with docs/operations.md"
+    ],
+    "skipped": {
+      "adaptive follow-up search": "The brief allows at most one implemented orchestration technique, and it needs a second generation beyond the 12-operation limit; documented as the next proposal."
+    }
+  }
+}
