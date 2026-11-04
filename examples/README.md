@@ -1,5 +1,10 @@
 # Research examples and evaluation
 
+## Video walkthrough
+
+[Watch the 57-second local demo](demo/fieldnotes-local-demo.mp4). It records the real API, worker and Firestore emulator with synthetic providers and no paid calls. It shows question submission, saved progressive output, source inspection and report restoration after refresh. The persistent banner distinguishes it from the historical live research examples below. It does not demonstrate real Valyu retrieval, Gemini support checks or scientific accuracy. The video has no audio; the interface and banner provide its labels.
+
+
 The current [Discover](discover.md) and [Compare](compare.md) reports were generated on the deployed service (commit c01f11d) through the documented evaluator flow, with an idempotent replay per journey that returned the same task ID. Their JSON snapshots keep the request, generated queries, source metadata and excerpts, report blocks, timings, usage, outcome and support reference, and contain no provider key or session cookie. [Discover PDF](discover.pdf), [Compare PDF](compare.pdf) and the [app preview](fieldnotes.png) were captured in an isolated headless Chrome. Outputs from the earlier release are kept unchanged in [earlier-release](earlier-release/) so their limitations stay visible.
 
 | Current case | Outcome                                                                     | Task acceptance | Total elapsed | First block after acceptance | Measured Search | Estimated model |
