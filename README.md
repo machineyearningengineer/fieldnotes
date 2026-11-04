@@ -8,6 +8,10 @@ Built as a full-stack take-home with a Google Cloud backend and Vercel frontend.
 
 ## See the result
 
+[![Animated preview of the synthetic local workflow. Click to watch the full 57-second video.](examples/demo/preview.gif)](examples/demo/fieldnotes-local-demo.mp4)
+
+*Selected moments from the synthetic local demo. Click the preview for the full video.*
+
 **[Watch the 57-second demo](examples/demo/fieldnotes-local-demo.mp4)** — a real local synthetic task: submit a question, watch saved sections arrive, inspect a citation and source passage, then refresh the saved report. The recording is silent and labelled throughout. It demonstrates the application workflow, not live retrieval or model evidence checking.
 
 - **[Discover report](examples/discover.md):** a saved research answer with source links. Also available as a [PDF](examples/discover.pdf).
