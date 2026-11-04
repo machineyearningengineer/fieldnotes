@@ -7,3 +7,9 @@ The interview has finished. The repository retains the implementation, local syn
 - The separate ChatGPT Sites interview guide remains available; it is static reading material and makes no research provider calls.
 
 The public edition starts with a clean source snapshot. Employer correspondence, the employer brief, private review notes, local credentials, scratch state and the original Git history remain private. Long retrieved excerpts are omitted from public example JSON; original evidence remains local. The existing licence is retained; publication does not grant an open-source licence.
+
+## Private data archive
+
+The full archive contains task inputs, owner identifiers, submission/idempotency records, raw retrieval results, generated drafts, evidence-check artifacts and provider receipts. It is not a sanitised public dataset. Keep it out of Git, including Git LFS and release assets.
+
+The private local JSON export contains 700 documents. It is a custom Firestore REST export, not a native Firestore managed backup. Restoration has not been tested. Preserve an encrypted second copy in private backup storage, with a manifest and checksum, before treating it as a durable archive. Selected reports and redacted examples in this repository are the public evidence set.

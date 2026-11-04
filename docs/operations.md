@@ -1,6 +1,6 @@
 # Operations
 
-The interview deployment is retired. These commands document the original setup and can incur charges if used to redeploy. Google project cleanup status is recorded in `docs/retirement.md`.
+The interview deployment is retired. These commands document the original setup and can incur charges if used to redeploy. Google project cleanup status is recorded in [the retirement record](retirement.md).
 
 Detail for running, deploying, inspecting and maintaining this installation. The [README](../README.md) owns the overview, architecture, rationale and limits.
 
@@ -43,7 +43,21 @@ node scenarios/reader.mjs http://localhost:YOUR_WEB_PORT
 
 The k6 read smoke measures local reads only. The reader persona uses an isolated headless Chrome with mocked transport to check desktop/light and mobile/dark source panels, extraction formatting, refresh and cached offline reading; source navigation must add no task reads. Neither measures production capacity.
 
-## Hosted evaluator flow
+## Local API example
+
+Use the local API origin printed by `pnpm dev`:
+
+```sh
+curl -X POST http://127.0.0.1:YOUR_API_PORT/tasks \
+  -H 'Content-Type: application/json' -H 'Idempotency-Key: example-discover-1' \
+  -d '{"schemaVersion":1,"kind":"discover","question":"What evidence supports sodium-ion batteries for stationary grid storage?"}'
+
+curl http://127.0.0.1:YOUR_API_PORT/tasks/TASK_ID
+```
+
+## Historical hosted evaluator flow
+
+The original demo is offline. These commands require a new authorised deployment and credentials.
 
 Save the separately supplied access code in an untracked local file, then:
 
